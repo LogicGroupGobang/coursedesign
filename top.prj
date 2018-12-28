@@ -1,0 +1,5 @@
+verilog work "vga_sync.v"
+verilog work "ipcore_dir/rom_cb.v"
+verilog work "disp_chess_board.v"
+verilog work "clk_div.v"
+verilog work "top.v"
