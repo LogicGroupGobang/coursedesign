@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Fri Dec 28 21:14:43 2018">
+<application name="pn" timeStamp="Mon Dec 31 13:56:22 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="939DAE251EAD43928EEA2FD84DF7046B" type="project"/>
-<property name="ProjectIteration" value="14" type="project"/>
-<property name="ProjectFile" value="F:/ise/coursedesign/coursedesign.xise" type="project"/>
+<property name="ProjectIteration" value="16" type="project"/>
+<property name="ProjectFile" value="D:/iseproj/coursedesign/coursedesign.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2018-12-27T14:08:55" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -24,7 +24,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2018-12-27T14:08:55" type="design"/>
 <property name="PROP_intWbtProjectID" value="939DAE251EAD43928EEA2FD84DF7046B" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="14" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="16" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
@@ -38,7 +38,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_COREGEN" value="1" type="source"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VERILOG" value="4" type="source"/>
+<property name="FILE_VERILOG" value="5" type="source"/>
 </section>
 </application>
 </document>

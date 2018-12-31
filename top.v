@@ -39,13 +39,24 @@ module top(
     
     // Turn off the arduino buzzer
     //assign buz = 1'b1;
-    
-    
+    reg [224:0] display_black,display_white;
+	 reg [3:0] choose_row,choose_col;
+	 
+	 initial begin
+		display_black <= 225'd5;
+		display_white <= 225'd144;
+		choose_row <= 4'd7;
+		choose_col <= 4'd7;
+    end
     
     disp_chess_board
         display(
             .clk(clk_div[1]),
             .rst(rst),
+				.display_black(display_black),
+				.display_white(display_white),
+				.choose_row(choose_row), 
+				.chosse_col(chosse_col), 
             .sync_h(sync_h),
             .sync_v(sync_v),
             .r(r),

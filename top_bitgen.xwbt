@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=F:\ise\coursedesign\top.ncd
-OUTFILE=F:\ise\coursedesign\top.bit
+INFILE=D:\iseproj\coursedesign\top.ncd
+OUTFILE=D:\iseproj\coursedesign\top.bit
 FAMILY=Kintex7
 PART=xc7k160t-1ffg676
-WORKINGDIR=F:\ise\coursedesign
-LICENSE=ISE
-USER_INFO=_
+WORKINGDIR=D:\iseproj\coursedesign
+LICENSE=WebPack
+USER_INFO=__0_0_0
