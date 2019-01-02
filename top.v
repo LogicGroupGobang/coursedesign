@@ -28,7 +28,13 @@ module top(
     output wire sync_v,     // VGA vertical sync
     output wire [3:0] r,    // VGA red component
     output wire [3:0] g,    // VGA green component
-    output wire [3:0] b   // VGA blue component
+    output wire [3:0] b,   // VGA blue component
+	  
+	 //for test 
+	 output wire seg_clk,
+	 output wire seg_sout,
+	 output wire SEG_PEN,
+	 output wire seg_clrn
     );
     
 
@@ -36,11 +42,13 @@ module top(
     wire [3:0] display_i;
   
     wire [31:0] clk_div;
+	 wire key_up, key_down, key_left, key_right, key_ok, key_switch;
     
     // Turn off the arduino buzzer
     //assign buz = 1'b1;
     reg [224:0] display_black,display_white;
 	 reg [3:0] choose_row,choose_col;
+    wire [3:0] whichkey;
 	 
 	 initial begin
 		display_black <= 225'd5;
@@ -71,6 +79,28 @@ module top(
             .rst(rst),
             .clk_div(clk_div)
         );
-    
+	 ps2_input
+		  myinput(
+            .clk_slow(clk_div[16]),
+            .clk_fast(clk_div[6]),
+            .rst(rst),
+            .ps2_clk(ps2_clk),
+            .ps2_data(ps2_data),
+            .key_up(key_up),
+            .key_down(key_down),
+            .key_left(key_left),
+            .key_right(key_right),
+            .key_ok(key_ok),
+            .key_switch(key_switch),
+				.whichkey(whichkey)
+     );  
+
+
+
+	//LED输出对应功能键的数字
+	SSeg7_Dev m4(.clk(clk),.rst(1'b0),.Start(clk_div[20]),.SW0(1'b1),.flash(1'b0),.Hexs({28'h0_00_00_00,whichkey[3],whichkey[2],whichkey[1],whichkey[0]}),
+	.point(8'b1111_1111),.LES(8'b1111_1111),.seg_clk(seg_clk),.seg_sout(seg_sout),.SEG_PEN(SEG_PEN),.seg_clrn(seg_clrn));
+	
+		
 endmodule
 
