@@ -28,35 +28,30 @@ module top(
     output wire sync_v,     // VGA vertical sync
     output wire [3:0] r,    // VGA red component
     output wire [3:0] g,    // VGA green component
-    output wire [3:0] b,   // VGA blue component
+    output wire [3:0] b   // VGA blue component
 	  
 	 //for test 
-	 output wire seg_clk,
-	 output wire seg_sout,
-	 output wire SEG_PEN,
-	 output wire seg_clrn
+	 //output wire seg_clk,
+	 //output wire seg_sout,
+	 //output wire SEG_PEN,
+	 //output wire seg_clrn
     );
     
-
-    
-    wire [3:0] display_i;
-  
     wire [31:0] clk_div;
-	 wire key_up, key_down, key_left, key_right, key_ok, key_switch;
-    
-    // Turn off the arduino buzzer
-    //assign buz = 1'b1;
-    reg [224:0] display_black,display_white;
-	 reg [3:0] choose_row,choose_col;
-    wire [3:0] whichkey;
+	 wire [224:0] display_black,display_white,disp;
+	 wire [3:0] choose_row,choose_col,choose_row1,choose_col1,choose_row2,choose_col2;
+	 reg is_player;
+	 reg [1:0] who_win;
+	 wire pressed,pressed1,pressed2;
+	 wire have_chess_white,have_chess_black;
 	 
-	 initial begin
-		display_black <= 225'd5;
-		display_white <= 225'd144;
-		choose_row <= 4'd7;
-		choose_col <= 4'd7;
-    end
-    
+	 assign have_chess_white = display_white[choose_row*15+choose_col];
+	 assign have_chess_black = display_black[choose_row*15+choose_col];
+	 //assign choose_row = (is_player) ? choose_row1 : choose_row2;
+    //assign choose_col = (is_player) ? choose_col1 : choose_col2;
+	 //assign disp = (is_player) ? display_black : display_white;
+	 assign pressed = (is_player) ? pressed1 : pressed2;
+	 
     disp_chess_board
         display(
             .clk(clk_div[1]),
@@ -64,7 +59,8 @@ module top(
 				.display_black(display_black),
 				.display_white(display_white),
 				.choose_row(choose_row), 
-				.chosse_col(chosse_col), 
+				.choose_col(choose_col), 
+				.who_win(who_win),
             .sync_h(sync_h),
             .sync_v(sync_v),
             .r(r),
@@ -79,27 +75,65 @@ module top(
             .rst(rst),
             .clk_div(clk_div)
         );
-	 ps2_input
-		  myinput(
-            .clk_slow(clk_div[16]),
-            .clk_fast(clk_div[6]),
-            .rst(rst),
-            .ps2_clk(ps2_clk),
-            .ps2_data(ps2_data),
-            .key_up(key_up),
-            .key_down(key_down),
-            .key_left(key_left),
-            .key_right(key_right),
-            .key_ok(key_ok),
-            .key_switch(key_switch),
-				.whichkey(whichkey)
-     );  
+	
+	 player player1 (
+			  .clk(clk), 
+			  .rst(rst), 
+			  .ps2_clk(ps2_clk), 
+			  .ps2_data(ps2_data), 
+			  .is_player(is_player), 
+			  .have_chess(have_chess_white), 
+			  .disp(display_black), 
+			  .choose_row(choose_row1), 
+			  .choose_col(choose_col1), 
+			  .pressed(pressed1)
+		  );
+	 
+	 player player2 (
+		     .clk(clk), 
+		     .rst(rst), 
+		     .ps2_clk(ps2_clk), 
+		     .ps2_data(ps2_data), 
+		     .is_player(~is_player), 
+		     .have_chess(have_chess_black), 
+		     .disp(display_white), 
+		     .choose_row(choose_row2), 
+		     .choose_col(choose_col2), 
+		     .pressed(pressed2)
+		  );
 
-
+	 win_checker check1 (
+			  .row(choose_row1), 
+			  .col(choose_col1), 
+			  .ch(display_black), 
+			  .win_check(win_check1)
+        );
+	
+	 win_checker check2 (
+			  .row(choose_row2), 
+			  .col(choose_col2), 
+			  .ch(display_white), 
+			  .win_check(win_check2)
+        );	
+		
+	always@(posedge clk or negedge rst)
+		if(!rst)
+			who_win <= 2'b0;
+		else 
+			if(is_player&&win_check1)
+				who_win <= 1;
+			else if(!is_player&&win_check2)
+				who_win <= 2;		
+	
+	always@(posedge pressed or negedge rst)
+		if(!rst) 
+			is_player <= 1'b1;
+		else 
+			is_player <= ~is_player;
 
 	//LED输出对应功能键的数字
-	SSeg7_Dev m4(.clk(clk),.rst(1'b0),.Start(clk_div[20]),.SW0(1'b1),.flash(1'b0),.Hexs({28'h0_00_00_00,whichkey[3],whichkey[2],whichkey[1],whichkey[0]}),
-	.point(8'b1111_1111),.LES(8'b1111_1111),.seg_clk(seg_clk),.seg_sout(seg_sout),.SEG_PEN(SEG_PEN),.seg_clrn(seg_clrn));
+	//SSeg7_Dev m4(.clk(clk),.rst(1'b0),.Start(clk_div[20]),.SW0(1'b1),.flash(1'b0),.Hexs({28'h0_00_00_00,whichkey[3],whichkey[2],whichkey[1],whichkey[0]}),
+	//.point(8'b1111_1111),.LES(8'b1111_1111),.seg_clk(seg_clk),.seg_sout(seg_sout),.SEG_PEN(SEG_PEN),.seg_clrn(seg_clrn));
 	
 		
 endmodule

@@ -19,7 +19,7 @@
  NET "ps2_data" LOC = M19 | IOSTANDARD = LVCMOS33;
 #Æß¶ÎÂë´®ÐÐ½Ó¿Ú
 
-NET "seg_clk"    LOC = M24  | IOSTANDARD = LVCMOS33 ;
-NET "seg_clrn"   LOC = M20  | IOSTANDARD = LVCMOS33 ;
-NET "seg_sout"   LOC = L24  | IOSTANDARD = LVCMOS33 ;
-NET "SEG_PEN"    LOC = R18  | IOSTANDARD = LVCMOS33 ;
+//NET "seg_clk"    LOC = M24  | IOSTANDARD = LVCMOS33 ;
+//NET "seg_clrn"   LOC = M20  | IOSTANDARD = LVCMOS33 ;
+//NET "seg_sout"   LOC = L24  | IOSTANDARD = LVCMOS33 ;
+//NET "SEG_PEN"    LOC = R18  | IOSTANDARD = LVCMOS33 ;

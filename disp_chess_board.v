@@ -25,7 +25,8 @@ module disp_chess_board(
 	 input wire [224:0] display_black,
 	 input wire [224:0] display_white,
 	 input wire [3:0] choose_row,
-	 input wire [3:0] chosse_col,
+	 input wire [3:0] choose_col,
+	 input wire [1:0] who_win,
     output wire sync_h,                 // VGA horizontal sync
     output wire sync_v,                 // VGA vertical sync
     output wire [3:0] r,                // VGA red component
@@ -169,16 +170,22 @@ module disp_chess_board(
         if (x >= GRID_X_BEGIN && x <= GRID_X_END &&
             y >= GRID_Y_BEGIN && y <= GRID_Y_END) begin
             // Draw the chessboard
-				ram_addr = y*480+(x-80) ;
-				if(display_black[row*15+col]&&judge)
+				if(who_win==2'd1)
+					rgb <= 12'h0f0;
+				else if(who_win==2'd2)
+					rgb <= 12'h00f;
+				else if(display_black[row*15+col]&&judge&&row!=4'b1111&&col!=4'b1111)
 					rgb <= 12'h000;
-				else if(display_white[row*15+col]&&judge)
+				else if(display_white[row*15+col]&&judge&&row!=4'b1111&&col!=4'b1111)
 					rgb <= 12'hfff;
-				else if(row==choose_row&&col==choose_row&&
-						(x-SIDE_X_BEGIN-col*GRID_SIZE==GRID_SIZE/2||x-SIDE_X_BEGIN-col*GRID_SIZE==-GRID_SIZE/2
-						||y-SIDE_Y_BEGIN-row*GRID_SIZE==GRID_SIZE/2||y-SIDE_Y_BEGIN-row*GRID_SIZE==-GRID_SIZE/2))
+				else if(row==choose_row&&col==choose_col&&row!=4'b1111&&col!=4'b1111&&
+						(x-SIDE_X_BEGIN-col*GRID_SIZE==GRID_SIZE/2||x-col*GRID_SIZE+GRID_SIZE/2==SIDE_X_BEGIN
+						||y-SIDE_Y_BEGIN-row*GRID_SIZE==GRID_SIZE/2||y-row*GRID_SIZE+GRID_SIZE/2==SIDE_Y_BEGIN))
 					rgb <= 12'hf00;
-				else rgb <= douta; 
+				else begin
+					ram_addr = y*480+(x-80) ;
+					rgb <= douta; 
+				end
 		  end
 		else  rgb <= 12'hfff;
 	end

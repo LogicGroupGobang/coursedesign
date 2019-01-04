@@ -44,7 +44,7 @@ module chess_piece(
 	assign r_sqr=radius*radius;
 	
 	always@(*) begin
-		if(x_sqr + y_sqr <= r_sqr)
+		if(x_sqr + y_sqr < r_sqr)
 			judge <= 1'b1;
 		else judge <= 1'b0;
 	end		
