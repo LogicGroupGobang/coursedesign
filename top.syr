@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> Reading design: top.prj
 
@@ -176,7 +176,6 @@ Elaborating module <horizontal_vertical>.
 Elaborating module <upper_left_to_lower_right>.
 
 Elaborating module <lower_left_to_upper_right>.
-WARNING:HDLCompiler:634 - "D:\iseproj\coursedesign\top.v" Line 42: Net <choose_row[3]> does not have a driver.
 WARNING:HDLCompiler:552 - "D:\iseproj\coursedesign\top.v" Line 56: Input port data_ram_we is not connected on this instance
 
 =========================================================================
@@ -186,17 +185,17 @@ WARNING:HDLCompiler:552 - "D:\iseproj\coursedesign\top.v" Line 56: Input port da
 Synthesizing Unit <top>.
     Related source file is "D:\iseproj\coursedesign\top.v".
 INFO:Xst:3210 - "D:\iseproj\coursedesign\top.v" line 56: Output port <douta> of the instance <display> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <choose_row> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <choose_col> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <is_player>.
     Found 2-bit register for signal <who_win>.
-    Found 4x4-bit multiplier for signal <choose_row[3]_GND_1_o_add_1_OUT> created at line 48.
+    Found 8-bit adder for signal <choose_row[3]_GND_1_o_add_1_OUT> created at line 48.
+    Found 4x4-bit multiplier for signal <n0032> created at line 48.
     Found 1-bit 225-to-1 multiplexer for signal <have_chess_white> created at line 48.
     Found 1-bit 225-to-1 multiplexer for signal <have_chess_black> created at line 49.
     Summary:
 	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
 	inferred   3 D-type flip-flop(s).
-	inferred   3 Multiplexer(s).
+	inferred   5 Multiplexer(s).
 Unit <top> synthesized.
 
 Synthesizing Unit <disp_chess_board>.
@@ -283,11 +282,13 @@ Synthesizing Unit <disp_chess_board>.
     Found 10-bit comparator lessequal for signal <n0184> created at line 170
     Found 10-bit comparator lessequal for signal <n0186> created at line 170
     Found 10-bit comparator lessequal for signal <n0189> created at line 171
+    Found 4-bit comparator equal for signal <row[3]_choose_row[3]_equal_110_o> created at line 181
+    Found 4-bit comparator equal for signal <col[3]_choose_col[3]_equal_111_o> created at line 181
     Summary:
 	inferred   4 Multiplier(s).
 	inferred  11 Adder/Subtractor(s).
 	inferred  30 D-type flip-flop(s).
-	inferred  63 Comparator(s).
+	inferred  65 Comparator(s).
 	inferred  36 Multiplexer(s).
 Unit <disp_chess_board> synthesized.
 
@@ -526,7 +527,7 @@ Macro Statistics
  32x32-bit multiplier                                  : 2
  4x4-bit multiplier                                    : 6
  5x4-bit multiplier                                    : 4
-# Adders/Subtractors                                   : 93
+# Adders/Subtractors                                   : 94
  10-bit adder                                          : 2
  11-bit subtractor                                     : 7
  20-bit adder                                          : 1
@@ -539,7 +540,7 @@ Macro Statistics
  5-bit subtractor                                      : 2
  6-bit adder                                           : 2
  7-bit adder                                           : 4
- 8-bit adder                                           : 49
+ 8-bit adder                                           : 50
  9-bit adder                                           : 2
 # Registers                                            : 45
  1-bit register                                        : 7
@@ -552,16 +553,17 @@ Macro Statistics
  4-bit register                                        : 10
  8-bit register                                        : 2
  9-bit register                                        : 2
-# Comparators                                          : 92
+# Comparators                                          : 94
  10-bit comparator greater                             : 6
  10-bit comparator lessequal                           : 63
  20-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 2
+ 4-bit comparator equal                                : 2
  4-bit comparator greater                              : 14
  4-bit comparator lessequal                            : 2
  4-bit comparator not equal                            : 2
  9-bit comparator lessequal                            : 2
-# Multiplexers                                         : 589
+# Multiplexers                                         : 591
  1-bit 128-to-1 multiplexer                            : 4
  1-bit 13-to-1 multiplexer                             : 4
  1-bit 2-to-1 multiplexer                              : 21
@@ -572,7 +574,7 @@ Macro Statistics
  10-bit 2-to-1 multiplexer                             : 2
  12-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 450
- 4-bit 2-to-1 multiplexer                              : 39
+ 4-bit 2-to-1 multiplexer                              : 41
  8-bit 2-to-1 multiplexer                              : 2
  9-bit 2-to-1 multiplexer                              : 2
 
@@ -610,6 +612,10 @@ Synthesizing (advanced) Unit <ps2_scan>.
 The following registers are absorbed into counter <read_state>: 1 register on signal <read_state>.
 Unit <ps2_scan> synthesized (advanced).
 
+Synthesizing (advanced) Unit <top>.
+	Multiplier <Mmult_n0032> in block <top> and adder/subtractor <Madd_choose_row[3]_GND_1_o_add_1_OUT> in block <top> are combined into a MAC<Maddsub_n0032>.
+Unit <top> synthesized (advanced).
+
 Synthesizing (advanced) Unit <vga_sync>.
 The following registers are absorbed into counter <x>: 1 register on signal <x>.
 The following registers are absorbed into counter <y>: 1 register on signal <y>.
@@ -619,13 +625,12 @@ Unit <vga_sync> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# MACs                                                 : 6
+# MACs                                                 : 7
  10x9-to-18-bit MAC                                    : 1
- 4x4-to-8-bit MAC                                      : 1
+ 4x4-to-8-bit MAC                                      : 2
  4x4-to-9-bit MAC                                      : 2
  5x4-to-32-bit MAC                                     : 2
-# Multipliers                                          : 7
- 2x4-bit multiplier                                    : 1
+# Multipliers                                          : 6
  32x32-bit multiplier                                  : 2
  4x4-bit multiplier                                    : 2
  5x4-bit multiplier                                    : 2
@@ -647,26 +652,27 @@ Macro Statistics
  4-bit updown counter                                  : 4
 # Registers                                            : 549
  Flip-Flops                                            : 549
-# Comparators                                          : 92
+# Comparators                                          : 94
  10-bit comparator greater                             : 6
  10-bit comparator lessequal                           : 63
  20-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 2
+ 4-bit comparator equal                                : 2
  4-bit comparator greater                              : 14
  4-bit comparator lessequal                            : 2
  4-bit comparator not equal                            : 2
  9-bit comparator lessequal                            : 2
-# Multiplexers                                         : 582
+# Multiplexers                                         : 585
  1-bit 128-to-1 multiplexer                            : 4
  1-bit 13-to-1 multiplexer                             : 4
- 1-bit 2-to-1 multiplexer                              : 18
+ 1-bit 2-to-1 multiplexer                              : 19
  1-bit 225-to-1 multiplexer                            : 56
  1-bit 25-to-1 multiplexer                             : 2
  1-bit 32-to-1 multiplexer                             : 2
  1-bit 64-to-1 multiplexer                             : 2
  12-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 450
- 4-bit 2-to-1 multiplexer                              : 37
+ 4-bit 2-to-1 multiplexer                              : 39
  8-bit 2-to-1 multiplexer                              : 2
  9-bit 2-to-1 multiplexer                              : 2
 
@@ -746,9 +752,9 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <player1/last_key_3>
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 8.
 FlipFlop display/sync/x_1 has been replicated 4 time(s)
-FlipFlop display/sync/x_3 has been replicated 4 time(s)
+FlipFlop display/sync/x_3 has been replicated 1 time(s)
 FlipFlop display/sync/x_7 has been replicated 3 time(s)
 FlipFlop display/sync/x_8 has been replicated 3 time(s)
 FlipFlop display/sync/x_9 has been replicated 3 time(s)
@@ -768,8 +774,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 693
- Flip-Flops                                            : 693
+# Registers                                            : 690
+ Flip-Flops                                            : 690
 
 =========================================================================
 
@@ -792,22 +798,22 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6692
+# BELS                             : 6923
 #      GND                         : 2
 #      INV                         : 19
-#      LUT1                        : 52
-#      LUT2                        : 230
-#      LUT3                        : 459
-#      LUT4                        : 215
-#      LUT5                        : 307
-#      LUT6                        : 3251
-#      MUXCY                       : 274
-#      MUXF7                       : 1074
-#      MUXF8                       : 510
+#      LUT1                        : 55
+#      LUT2                        : 227
+#      LUT3                        : 451
+#      LUT4                        : 211
+#      LUT5                        : 308
+#      LUT6                        : 3371
+#      MUXCY                       : 295
+#      MUXF7                       : 1122
+#      MUXF8                       : 540
 #      VCC                         : 2
-#      XORCY                       : 297
-# FlipFlops/Latches                : 700
-#      FDC                         : 91
+#      XORCY                       : 320
+# FlipFlops/Latches                : 697
+#      FDC                         : 88
 #      FDCE                        : 553
 #      FDE                         : 25
 #      FDP                         : 1
@@ -833,15 +839,15 @@ Selected Device : 7k160tffg676-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             700  out of  202800     0%  
- Number of Slice LUTs:                 4533  out of  101400     4%  
-    Number used as Logic:              4533  out of  101400     4%  
+ Number of Slice Registers:             697  out of  202800     0%  
+ Number of Slice LUTs:                 4642  out of  101400     4%  
+    Number used as Logic:              4642  out of  101400     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4626
-   Number with an unused Flip Flop:    3926  out of   4626    84%  
-   Number with an unused LUT:            93  out of   4626     2%  
-   Number of fully used LUT-FF pairs:   607  out of   4626    13%  
+ Number of LUT Flip Flop pairs used:   4731
+   Number with an unused Flip Flop:    4034  out of   4731    85%  
+   Number with an unused LUT:            89  out of   4731     1%  
+   Number of fully used LUT-FF pairs:   608  out of   4731    12%  
    Number of unique control sets:        36
 
 IO Utilization: 
@@ -881,7 +887,7 @@ player1/divider/clk_div_16         | NONE(player1/myinput/whichkey_2)| 15    |
 player2/divider/clk_div_16         | NONE(player2/myinput/whichkey_2)| 15    |
 player2/divider/clk_div_6          | BUFG                            | 25    |
 player1/divider/clk_div_6          | BUFG                            | 25    |
-divider/clk_div_1                  | BUFG                            | 187   |
+divider/clk_div_1                  | BUFG                            | 184   |
 -----------------------------------+---------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -893,7 +899,7 @@ Asynchronous Control Signals Information:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                         | Buffer(FF name)                                                                                                                                      | Load  |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_14102(display/U3/XST_GND:G)                                                                                                                                                     | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[45].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 136   |
+display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_14102(display/U3/XST_GND:G)                                                                                                                                                     | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 136   |
 display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
 display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
 display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/cascadelata_tmp(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
@@ -918,7 +924,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 13.971ns (Maximum Frequency: 71.577MHz)
+   Minimum period: 14.073ns (Maximum Frequency: 71.059MHz)
    Minimum input arrival time before clock: 2.286ns
    Maximum output required time after clock: 2.864ns
    Maximum combinational path delay: No path found
@@ -929,10 +935,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'pressed'
-  Clock period: 1.198ns (frequency: 834.724MHz)
+  Clock period: 1.309ns (frequency: 763.814MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               1.198ns (Levels of Logic = 1)
+Delay:               1.309ns (Levels of Logic = 1)
   Source:            is_player (FF)
   Destination:       is_player (FF)
   Source Clock:      pressed rising
@@ -942,44 +948,46 @@ Delay:               1.198ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              7   0.282   0.439  is_player (is_player)
+     FDP:C->Q             26   0.282   0.550  is_player (is_player)
      INV:I->O              1   0.067   0.399  is_player_INV_95_o1_INV_0 (is_player_INV_95_o)
      FDP:D                     0.011          is_player
     ----------------------------------------
-    Total                      1.198ns (0.360ns logic, 0.838ns route)
-                                       (30.1% logic, 69.9% route)
+    Total                      1.309ns (0.360ns logic, 0.949ns route)
+                                       (27.5% logic, 72.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 7.579ns (frequency: 131.944MHz)
-  Total number of paths / destination ports: 1896723 / 980
+  Clock period: 7.767ns (frequency: 128.754MHz)
+  Total number of paths / destination ports: 4624107 / 980
 -------------------------------------------------------------------------
-Delay:               7.579ns (Levels of Logic = 11)
-  Source:            player1/disp_159 (FF)
+Delay:               7.767ns (Levels of Logic = 13)
+  Source:            player1/choose_row_0 (FF)
   Destination:       who_win_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: player1/disp_159 to who_win_0
+  Data Path: player1/choose_row_0 to who_win_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            24   0.282   0.748  player1/disp_159 (player1/disp_159)
-     LUT3:I0->O            1   0.053   0.725  check1/U2/ch[15]_ch[159]_OR_121_o2 (check1/U2/ch[15]_ch[159]_OR_121_o2)
-     LUT5:I0->O            1   0.053   0.725  check1/U2/ch[15]_ch[159]_OR_121_o3 (check1/U2/ch[15]_ch[159]_OR_121_o3)
-     LUT5:I0->O            1   0.053   0.635  check1/U2/ch[15]_ch[159]_OR_121_o6 (check1/U2/ch[15]_ch[159]_OR_121_o)
-     LUT6:I2->O            1   0.053   0.000  check1/U2/Mmux_row[3]_GND_17_o_Mux_2_o_7 (check1/U2/Mmux_row[3]_GND_17_o_Mux_2_o_7)
-     MUXF7:I0->O           1   0.214   0.635  check1/U2/Mmux_row[3]_GND_17_o_Mux_2_o_5_f7 (check1/U2/Mmux_row[3]_GND_17_o_Mux_2_o_5_f7)
-     LUT6:I2->O            1   0.053   0.000  is_player_win_check1_AND_3041_o13_G (N297)
-     MUXF7:I1->O           1   0.217   0.739  is_player_win_check1_AND_3041_o13 (is_player_win_check1_AND_3041_o13)
-     LUT6:I0->O            1   0.053   0.739  is_player_win_check1_AND_3041_o29 (is_player_win_check1_AND_3041_o29)
-     LUT6:I0->O            2   0.053   0.419  is_player_win_check1_AND_3041_o32 (is_player_win_check1_AND_3041_o32)
-     LUT5:I4->O            2   0.053   0.419  is_player_win_check1_AND_3041_o34 (is_player_win_check1_AND_3041_o)
-     LUT6:I5->O            2   0.053   0.405  _n0035_inv34 (_n0035_inv)
+     FDPE:C->Q           908   0.282   0.686  player1/choose_row_0 (player1/choose_row_0)
+     LUT2:I1->O            1   0.053   0.000  check1/U1/Mmult_n0208_Madd2_lut<1> (check1/U1/Mmult_n0208_Madd2_lut<1>)
+     MUXCY:S->O            1   0.291   0.000  check1/U1/Mmult_n0208_Madd2_cy<1> (check1/U1/Mmult_n0208_Madd2_cy<1>)
+     XORCY:CI->O         126   0.320   0.775  check1/U1/Mmult_n0208_Madd2_xor<2> (check1/U1/Madd_row[3]_GND_16_o_add_102_OUT_lut<2>)
+     LUT3:I0->O           56   0.053   0.557  check1/U1/row[3]_GND_16_o_add_147_OUT<2>1 (check1/U1/row[3]_GND_16_o_add_147_OUT<2>)
+     MUXF7:S->O            1   0.280   0.000  check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_12_f7_3 (check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_12_f74)
+     MUXF8:I0->O           1   0.160   0.635  check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_10_f8_2 (check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_10_f83)
+     LUT6:I2->O            1   0.053   0.000  check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_51 (check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_51)
+     MUXF7:I1->O           1   0.217   0.000  check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_4_f7 (check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_4_f7)
+     MUXF8:I0->O           2   0.160   0.641  check1/U1/Mmux_row[3]_X_11_o_Mux_28_o_2_f8 (check1/U1/row[3]_X_11_o_Mux_28_o)
+     LUT4:I0->O            1   0.053   0.725  check1/U1/Mmux_win_check118 (check1/U1/Mmux_win_check117)
+     LUT6:I1->O            3   0.053   0.649  check1/U1/Mmux_win_check120 (check1/U1/Mmux_win_check119)
+     LUT4:I0->O            1   0.053   0.413  check1/U1/Mmux_win_check122 (check1/check1)
+     LUT5:I4->O            2   0.053   0.405  _n0037_inv35 (_n0037_inv)
      FDCE:CE                   0.200          who_win_0
     ----------------------------------------
-    Total                      7.579ns (1.390ns logic, 6.189ns route)
-                                       (18.3% logic, 81.7% route)
+    Total                      7.767ns (2.281ns logic, 5.486ns route)
+                                       (29.4% logic, 70.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'player1/divider/clk_div_16'
@@ -1069,7 +1077,7 @@ Delay:               3.261ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             4   0.282   0.505  player1/myinput/scanner/read_data_2 (player1/myinput/scanner/read_data_2)
-     LUT2:I0->O            1   0.053   0.485  player1/myinput/scanner/is_e0_PWR_11_o_MUX_395_o<7>1_SW0 (N25)
+     LUT2:I0->O            1   0.053   0.485  player1/myinput/scanner/is_e0_PWR_11_o_MUX_395_o<7>1_SW0 (N22)
      LUT6:I4->O            4   0.053   0.433  player1/myinput/scanner/is_e0_PWR_11_o_MUX_395_o<7>1 (player1/myinput/scanner/is_e0_PWR_11_o_MUX_395_o<7>1)
      LUT2:I1->O            2   0.053   0.745  player1/myinput/scanner/is_f0_PWR_11_o_MUX_397_o<7>1 (player1/myinput/scanner/is_f0_PWR_11_o_MUX_397_o)
      LUT6:I0->O            1   0.053   0.399  player1/myinput/scanner/_n0137_inv1 (player1/myinput/scanner/_n0137_inv)
@@ -1080,49 +1088,49 @@ Delay:               3.261ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'divider/clk_div_1'
-  Clock period: 13.971ns (frequency: 71.577MHz)
-  Total number of paths / destination ports: 65515034911 / 221
+  Clock period: 14.073ns (frequency: 71.059MHz)
+  Total number of paths / destination ports: 126727330814 / 218
 -------------------------------------------------------------------------
-Delay:               13.971ns (Levels of Logic = 25)
-  Source:            display/sync/y_8_1 (FF)
+Delay:               14.073ns (Levels of Logic = 25)
+  Source:            display/sync/x_3 (FF)
   Destination:       display/Maddsub_y[9]_PWR_2_o_MuLt_129_OUT1_0 (FF)
   Source Clock:      divider/clk_div_1 rising
   Destination Clock: divider/clk_div_1 rising
 
-  Data Path: display/sync/y_8_1 to display/Maddsub_y[9]_PWR_2_o_MuLt_129_OUT1_0
+  Data Path: display/sync/x_3 to display/Maddsub_y[9]_PWR_2_o_MuLt_129_OUT1_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.282   0.635  display/sync/y_8_1 (display/sync/y_8_1)
-     LUT4:I0->O            4   0.053   0.745  display/Mmux_row12311 (display/Mmux_row121)
-     LUT6:I1->O            1   0.053   0.000  display/GND_3_o_y[9]_AND_1077_o_G (N299)
-     MUXF7:I1->O           3   0.217   0.427  display/GND_3_o_y[9]_AND_1077_o (display/GND_3_o_y[9]_AND_1077_o)
-     LUT6:I5->O            6   0.053   0.446  display/Mmux_row24 (display/Mmux_row23)
-     LUT6:I5->O           14   0.053   0.484  display/Mmux_row25 (display/row<1>)
-     MUXCY:DI->O           1   0.278   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<2> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<2>)
-     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<3> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<3>)
-     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<4> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<4>)
-     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<5> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_cy<5>)
-     XORCY:CI->O           1   0.320   0.413  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd1_xor<6> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_71)
-     LUT2:I1->O            1   0.053   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd3_lut<7> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd3_lut<7>)
-     MUXCY:S->O            0   0.291   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd3_cy<7> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd3_cy<7>)
-     XORCY:CI->O           1   0.320   0.413  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd3_xor<8> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_8)
-     LUT5:I4->O            1   0.053   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_lut<8> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_lut<8>)
-     MUXCY:S->O            1   0.291   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_cy<8> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_cy<8>)
-     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_cy<9> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_cy<9>)
-     MUXCY:CI->O           0   0.015   0.000  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_cy<10> (display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_cy<10>)
-     XORCY:CI->O          18   0.320   0.511  display/U4/Maddsub_row[3]_PWR_5_o_MuLt_8_OUT_Madd_xor<11> (display/U4/GND_6_o_GND_6_o_sub_10_OUT<11>)
-     DSP48E1:A11->PCOUT47    1   3.421   0.000  display/U4/Mmult_n0016 (display/U4/Mmult_n0016_PCOUT_to_Mmult_n00161_PCIN_47)
-     DSP48E1:PCIN47->P0    1   1.286   0.485  display/U4/Mmult_n00161 (display/U4/n0016<17>)
-     LUT2:I0->O            1   0.053   0.000  display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_lut<17> (display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_lut<17>)
+     FDC:C->Q             38   0.282   0.756  display/sync/x_3 (display/sync/x_3)
+     LUT4:I1->O            2   0.053   0.491  display/GND_3_o_x[9]_AND_1091_o_SW0 (N34)
+     LUT6:I4->O           11   0.053   0.668  display/GND_3_o_x[9]_AND_1091_o (display/GND_3_o_x[9]_AND_1091_o)
+     LUT6:I3->O            4   0.053   0.505  display/Mmux_col3_SW0 (N46)
+     LUT6:I4->O           14   0.053   0.498  display/Mmux_col3 (display/Mmult_col[3]_PWR_2_o_MuLt_114_OUT_Madd1_lut<5>)
+     LUT6:I5->O            1   0.053   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd2_lut<2> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd2_lut<2>)
+     MUXCY:S->O            1   0.291   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd2_cy<2> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd2_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd2_cy<3> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd2_cy<3>)
+     XORCY:CI->O           2   0.320   0.491  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd2_xor<4> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_42)
+     LUT2:I0->O            1   0.053   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_lut<4> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_lut<4>)
+     MUXCY:S->O            1   0.291   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<4> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<5> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<6> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<6>)
+     MUXCY:CI->O           0   0.015   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<7> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_cy<7>)
+     XORCY:CI->O           1   0.320   0.413  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd3_xor<8> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_8)
+     LUT2:I1->O            1   0.053   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_lut<8> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_lut<8>)
+     MUXCY:S->O            1   0.291   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_cy<8> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_cy<9> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_cy<9>)
+     MUXCY:CI->O           0   0.015   0.000  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_cy<10> (display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_cy<10>)
+     XORCY:CI->O          18   0.320   0.511  display/U4/Maddsub_col[3]_PWR_5_o_MuLt_1_OUT_Madd_xor<11> (display/U4/GND_6_o_GND_6_o_sub_3_OUT<11>)
+     DSP48E1:A11->PCOUT47    1   3.421   0.000  display/U4/Mmult_n0015 (display/U4/Mmult_n0015_PCOUT_to_Mmult_n00151_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.286   0.413  display/U4/Mmult_n00151 (display/U4/n0015<17>)
+     LUT2:I1->O            1   0.053   0.000  display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_lut<17> (display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_lut<17>)
      MUXCY:S->O            1   0.291   0.000  display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_cy<17> (display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_cy<17>)
-     XORCY:CI->O          14   0.320   0.687  display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_xor<18> (display/U4/x_sqr[19]_y_sqr[19]_add_15_OUT<18>)
-     LUT6:I3->O           18   0.053   0.525  display/_n0392_inv_rstpot (display/_n0392_inv_rstpot)
-     LUT3:I2->O            1   0.053   0.000  display/Maddsub_y[9]_PWR_2_o_MuLt_129_OUT1_17_dpot (display/Maddsub_y[9]_PWR_2_o_MuLt_129_OUT1_17_dpot)
-     FDE:D                     0.011          display/Maddsub_y[9]_PWR_2_o_MuLt_129_OUT1_17
+     XORCY:CI->O           3   0.320   0.616  display/U4/Madd_x_sqr[19]_y_sqr[19]_add_15_OUT_xor<18> (display/U4/x_sqr[19]_y_sqr[19]_add_15_OUT<18>)
+     LUT6:I3->O           18   0.053   0.511  display/_n0384_inv1_cepot (display/_n0384_inv1_cepot)
+     FDE:CE                    0.200          display/Maddsub_y[9]_PWR_2_o_MuLt_129_OUT1_17
     ----------------------------------------
-    Total                     13.971ns (8.200ns logic, 5.771ns route)
-                                       (58.7% logic, 41.3% route)
+    Total                     14.073ns (8.200ns logic, 5.873ns route)
+                                       (58.3% logic, 41.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'pressed'
@@ -1138,7 +1146,7 @@ Offset:              1.532ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            13   0.000   0.479  rst_IBUF (rst_IBUF)
-     INV:I->O            657   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
+     INV:I->O            654   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
      FDP:PRE                   0.325          is_player
     ----------------------------------------
     Total                      1.532ns (0.392ns logic, 1.140ns route)
@@ -1158,7 +1166,7 @@ Offset:              1.532ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            13   0.000   0.479  rst_IBUF (rst_IBUF)
-     INV:I->O            657   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
+     INV:I->O            654   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
      FDCE:CLR                  0.325          player1/pressed
     ----------------------------------------
     Total                      1.532ns (0.392ns logic, 1.140ns route)
@@ -1178,7 +1186,7 @@ Offset:              2.286ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            13   0.000   0.565  rst_IBUF (rst_IBUF)
-     LUT6:I4->O            1   0.053   0.413  player1/myinput/_n0077_SW0 (N13)
+     LUT6:I4->O            1   0.053   0.413  player1/myinput/_n0077_SW0 (N10)
      LUT6:I5->O            2   0.053   0.419  player1/myinput/_n0077 (player1/myinput/_n0077)
      LUT4:I3->O            2   0.053   0.405  player1/myinput/Reset_OR_DriverANDClockEnable1 (player1/myinput/Reset_OR_DriverANDClockEnable)
      FDRE:R                    0.325          player1/myinput/whichkey_1
@@ -1200,7 +1208,7 @@ Offset:              2.286ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            13   0.000   0.565  rst_IBUF (rst_IBUF)
-     LUT6:I4->O            1   0.053   0.413  player2/myinput/_n0077_SW0 (N19)
+     LUT6:I4->O            1   0.053   0.413  player2/myinput/_n0077_SW0 (N16)
      LUT6:I5->O            2   0.053   0.419  player2/myinput/_n0077 (player2/myinput/_n0077)
      LUT4:I3->O            2   0.053   0.405  player2/myinput/Reset_OR_DriverANDClockEnable1 (player2/myinput/Reset_OR_DriverANDClockEnable)
      FDRE:R                    0.325          player2/myinput/whichkey_1
@@ -1222,7 +1230,7 @@ Offset:              1.532ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            13   0.000   0.479  rst_IBUF (rst_IBUF)
-     INV:I->O            657   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
+     INV:I->O            654   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
      FDC:CLR                   0.325          player2/myinput/scanner/ps2_clk_state_0
     ----------------------------------------
     Total                      1.532ns (0.392ns logic, 1.140ns route)
@@ -1242,7 +1250,7 @@ Offset:              1.532ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            13   0.000   0.479  rst_IBUF (rst_IBUF)
-     INV:I->O            657   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
+     INV:I->O            654   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
      FDC:CLR                   0.325          player1/myinput/scanner/ps2_clk_state_0
     ----------------------------------------
     Total                      1.532ns (0.392ns logic, 1.140ns route)
@@ -1250,7 +1258,7 @@ Offset:              1.532ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'divider/clk_div_1'
-  Total number of paths / destination ports: 70 / 70
+  Total number of paths / destination ports: 67 / 67
 -------------------------------------------------------------------------
 Offset:              1.532ns (Levels of Logic = 2)
   Source:            rst (PAD)
@@ -1262,7 +1270,7 @@ Offset:              1.532ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            13   0.000   0.479  rst_IBUF (rst_IBUF)
-     INV:I->O            657   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
+     INV:I->O            654   0.067   0.661  rst_inv1_INV_0 (display/sync/rst_inv)
      FDC:CLR                   0.325          display/sync/x_0
     ----------------------------------------
     Total                      1.532ns (0.392ns logic, 1.140ns route)
@@ -1282,7 +1290,7 @@ Offset:              2.864ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q             23   0.282   0.742  display/sync/x_9 (display/sync/x_9)
-     LUT3:I0->O            1   0.053   0.725  display/sync/video_on_SW0 (N57)
+     LUT3:I0->O            1   0.053   0.725  display/sync/video_on_SW0 (N52)
      LUT6:I1->O           12   0.053   0.557  display/sync/video_on (display/video_on)
      LUT2:I0->O            1   0.053   0.399  display/Mmux_b11 (b_0_OBUF)
      OBUF:I->O                 0.000          b_0_OBUF (b<0>)
@@ -1300,10 +1308,10 @@ Clock to Setup on destination clock clk
                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
-clk                       |    7.579|         |         |         |
+clk                       |    7.767|         |         |         |
 player1/divider/clk_div_16|    2.866|         |         |         |
 player2/divider/clk_div_16|    2.866|         |         |         |
-pressed                   |    2.726|         |         |         |
+pressed                   |    7.046|         |         |         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock divider/clk_div_1
@@ -1311,8 +1319,9 @@ Clock to Setup on destination clock divider/clk_div_1
                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------+---------+---------+---------+---------+
-clk              |    4.918|         |         |         |
-divider/clk_div_1|   13.971|         |         |         |
+clk              |    5.089|         |         |         |
+divider/clk_div_1|   14.073|         |         |         |
+pressed          |    5.200|         |         |         |
 -----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock player1/divider/clk_div_16
@@ -1354,20 +1363,20 @@ Clock to Setup on destination clock pressed
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-pressed        |    1.198|         |         |         |
+pressed        |    1.309|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 128.00 secs
-Total CPU time to Xst completion: 127.89 secs
+Total REAL time to Xst completion: 159.00 secs
+Total CPU time to Xst completion: 159.11 secs
  
 --> 
 
-Total memory usage is 4841940 kilobytes
+Total memory usage is 4810580 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   81 (   0 filtered)
+Number of warnings :   78 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 

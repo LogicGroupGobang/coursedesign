@@ -47,8 +47,8 @@ module top(
 	 
 	 assign have_chess_white = display_white[choose_row*15+choose_col];
 	 assign have_chess_black = display_black[choose_row*15+choose_col];
-	 //assign choose_row = (is_player) ? choose_row1 : choose_row2;
-    //assign choose_col = (is_player) ? choose_col1 : choose_col2;
+	 assign choose_row = (is_player) ? choose_row1 : choose_row2;
+    assign choose_col = (is_player) ? choose_col1 : choose_col2;
 	 //assign disp = (is_player) ? display_black : display_white;
 	 assign pressed = (is_player) ? pressed1 : pressed2;
 	 
@@ -120,9 +120,9 @@ module top(
 		if(!rst)
 			who_win <= 2'b0;
 		else 
-			if(is_player&&win_check1)
+			if(win_check1)
 				who_win <= 1;
-			else if(!is_player&&win_check2)
+			else if(win_check2)
 				who_win <= 2;		
 	
 	always@(posedge pressed or negedge rst)
