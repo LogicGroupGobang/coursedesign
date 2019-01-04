@@ -1,9 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Dec 31 13:56:10 2018
+// Written by: Map P.20131013 on Fri Jan 04 12:43:25 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "rst" LOCATE = SITE "V19" LEVEL 1;
+COMP "ps2_clk" LOCATE = SITE "N18" LEVEL 1;
 COMP "r<0>" LOCATE = SITE "N21" LEVEL 1;
 COMP "r<1>" LOCATE = SITE "N22" LEVEL 1;
 COMP "r<2>" LOCATE = SITE "R21" LEVEL 1;
@@ -19,5 +20,6 @@ COMP "g<0>" LOCATE = SITE "R22" LEVEL 1;
 COMP "g<1>" LOCATE = SITE "R23" LEVEL 1;
 COMP "g<2>" LOCATE = SITE "T24" LEVEL 1;
 COMP "g<3>" LOCATE = SITE "T25" LEVEL 1;
+COMP "ps2_data" LOCATE = SITE "M19" LEVEL 1;
 SCHEMATIC END;
 
