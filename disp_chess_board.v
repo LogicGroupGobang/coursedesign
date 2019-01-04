@@ -47,9 +47,11 @@ module disp_chess_board(
 					SIDE_X_BEGIN = 102,
 					SIDE_X_END = 536,
 					SIDE_Y_BEGIN = 23,
-					SIDE_Y_END = 457;
-					
-	 
+					SIDE_Y_END = 457,
+					RESULT_X_BEGIN = 280,
+               RESULT_X_END = 359,
+               RESULT_Y_BEGIN = 232,
+               RESULT_Y_END = 247;
 					
 	 
 	 
@@ -58,6 +60,7 @@ module disp_chess_board(
 	 reg [11:0] rgb;
 	 reg [17:0] ram_addr;
 	 reg [3:0] row,col;
+	 reg [14:0] a;
  	 //reg [11:0] douta;
 	 
     assign r = video_on ? rgb[11:8] : 4'b0;
@@ -66,6 +69,7 @@ module disp_chess_board(
 	 assign data_ram_we = 1'b0;
 	 
 	 initial begin ram_addr = 18'b0;
+	 a = 15'b0;
 	 end
 
  // VGA control signal generator
@@ -90,6 +94,12 @@ module disp_chess_board(
 		.dina(12'b0),   // input [11:0] dina
 		.douta(douta)// output [11:0] douta
    );
+	
+	font U9 (
+	.a(a),
+	.spo(spo)
+		
+	);
 	
 	chess_piece U4(
 		.clk(clk),
@@ -169,11 +179,162 @@ module disp_chess_board(
 	always @ (posedge clk) begin
         if (x >= GRID_X_BEGIN && x <= GRID_X_END &&
             y >= GRID_Y_BEGIN && y <= GRID_Y_END) begin
-            // Draw the chessboard
+            // Draw the chessboard   1 means black win 2 means white win 
 				if(who_win==2'd1)
-					rgb <= 12'h0f0;
+					begin 
+						if (x >= RESULT_X_BEGIN & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 7 & y <= RESULT_Y_BEGIN + 15 ) 
+						// output B
+						begin
+						a = 15'b0100_0010_0000_000 + (x - RESULT_X_BEGIN) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output l
+					   else if (x >= RESULT_X_BEGIN + 8 & y >= RESULT_Y_BEGIN  &
+						x <= RESULT_X_BEGIN + 15 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1100_0000_000 + (x - RESULT_X_BEGIN - 8 ) + 8 * (y - RESULT_Y_BEGIN );
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output a
+						else if (x >= RESULT_X_BEGIN + 16 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 23 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_0001_0000_000 + (x - RESULT_X_BEGIN - 16 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output c
+						else if (x >= RESULT_X_BEGIN + 24 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 31 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_0011_0000_000 + (x - RESULT_X_BEGIN - 24 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output k
+						else if (x >= RESULT_X_BEGIN + 32 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 39 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1011_0000_000 + (x - RESULT_X_BEGIN - 32 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// ouput W
+						else if (x >= RESULT_X_BEGIN + 48 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 55 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0101_0111_0000_000 + (x - RESULT_X_BEGIN - 48 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output i 
+						else if (x >= RESULT_X_BEGIN + 56 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 63 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1001_0000_000 + (x - RESULT_X_BEGIN - 56 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output n
+						else if (x >= RESULT_X_BEGIN + 64 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 71 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1110_0000_000 + (x - RESULT_X_BEGIN - 64 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output s
+						else if (x >= RESULT_X_BEGIN + 72 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 79 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0111_0011_0000_000 + (x - RESULT_X_BEGIN - 72 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						else rgb <= 12'h0f0;
+					end 
 				else if(who_win==2'd2)
+				begin
+				if (x >= RESULT_X_BEGIN & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 7 & y <= RESULT_Y_BEGIN + 15 ) 
+						// output W
+						begin
+						a = 15'b0101_0111_0000_000 + (x - RESULT_X_BEGIN) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output h
+					   else if (x >= RESULT_X_BEGIN + 8 & y >= RESULT_Y_BEGIN  &
+						x <= RESULT_X_BEGIN + 15 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1000_0000_000 + (x - RESULT_X_BEGIN - 8 ) + 8 * (y - RESULT_Y_BEGIN );
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output i
+						else if (x >= RESULT_X_BEGIN + 16 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 23 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1001_0000_000 + (x - RESULT_X_BEGIN - 16 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output t
+						else if (x >= RESULT_X_BEGIN + 24 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 31 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0111_0100_0000_000 + (x - RESULT_X_BEGIN - 24 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output e
+						else if (x >= RESULT_X_BEGIN + 32 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 39 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_0101_0000_000 + (x - RESULT_X_BEGIN - 32 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// ouput W
+						else if (x >= RESULT_X_BEGIN + 48 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 55 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0101_0111_0000_000 + (x - RESULT_X_BEGIN - 48 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output i 
+						else if (x >= RESULT_X_BEGIN + 56 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 63 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1001_0000_000 + (x - RESULT_X_BEGIN - 56 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output n
+						else if (x >= RESULT_X_BEGIN + 64 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 71 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0110_1110_0000_000 + (x - RESULT_X_BEGIN - 64 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+						// output s
+						else if (x >= RESULT_X_BEGIN + 72 & y >= RESULT_Y_BEGIN &
+						x <= RESULT_X_BEGIN + 79 & y <= RESULT_Y_BEGIN + 15 ) begin
+						a = 15'b0111_0011_0000_000 + (x - RESULT_X_BEGIN - 72 ) + 8 * (y - RESULT_Y_BEGIN);
+						if (spo == 1) 
+							rgb <= 12'h000;
+						else rgb <= 12'hfff;
+						end
+				else
 					rgb <= 12'h00f;
+				end
 				else if(display_black[row*15+col]&&judge&&row!=4'b1111&&col!=4'b1111)
 					rgb <= 12'h000;
 				else if(display_white[row*15+col]&&judge&&row!=4'b1111&&col!=4'b1111)

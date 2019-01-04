@@ -8,16 +8,16 @@
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;rom_cb&apos;...</arg>
+<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;font&apos;...</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file D:/iseproj/coursedesign/ipcore_dir/tmp/_cg/rom_cb/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file F:/coursedesign/ipcore_dir/tmp/_cg/font/doc/dist_mem_gen_v7_2_vinfo.html with file from view xilinx_documentation</arg>
 </msg>
 
-<msg type="info" file="sim" num="949" delta="new" >Finished generation of ASY schematic symbol.
+<msg type="info" file="sim" num="949" delta="old" >Finished generation of ASY schematic symbol.
 </msg>
 
-<msg type="info" file="sim" num="948" delta="new" >Finished FLIST file generation.
+<msg type="info" file="sim" num="948" delta="old" >Finished FLIST file generation.
 </msg>
 
 </messages>
