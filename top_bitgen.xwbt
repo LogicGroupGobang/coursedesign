@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.ncd
-OUTFILE=C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.bit
+INFILE=C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.ncd
+OUTFILE=C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.bit
 FAMILY=Kintex7
 PART=xc7k160t-1ffg676
-WORKINGDIR=C:\Users\hc\Desktop\coursedesign-master\coursedesign-master
+WORKINGDIR=C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master
 LICENSE=ISE
 USER_INFO=_

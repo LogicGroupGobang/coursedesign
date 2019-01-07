@@ -31,31 +31,33 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock clk
-------------+------------+------------+------------+------------+------------------+--------+
-            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
-Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
-------------+------------+------------+------------+------------+------------------+--------+
-rst         |    8.237(R)|      SLOW  |    1.719(R)|      SLOW  |clk_BUFGP         |   0.000|
-------------+------------+------------+------------+------------+------------------+--------+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+SEG_PEN     |        11.075(R)|      SLOW  |         4.153(R)|      FAST  |clk_BUFGP         |   0.000|
+seg_clk     |        10.475(R)|      SLOW  |         3.944(R)|      FAST  |clk_BUFGP         |   0.000|
+seg_sout    |        10.098(R)|      SLOW  |         3.770(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.296|         |         |         |
+clk            |    7.122|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Jan 04 19:30:02 2019 
+Analysis completed Sun Jan 06 16:20:49 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 5154 MB
+Peak Memory Usage: 5270 MB
 
 
 

@@ -38,7 +38,7 @@ module player(
 	clk_div
 		divider(
 			.clk(clk),
-         .rst(rst),
+         .rst(1'b1),
          .clk_div(clk_div)
 		);
 		
@@ -46,7 +46,7 @@ module player(
 		  myinput(
             .clk_slow(clk_div[16]),
             .clk_fast(clk_div[6]),
-            .rst(rst),
+            .rst(1'b1),
             .ps2_clk(ps2_clk),
             .ps2_data(ps2_data),
             .key_up(key_up),

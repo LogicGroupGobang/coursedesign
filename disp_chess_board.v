@@ -53,6 +53,9 @@ module disp_chess_board(
                RESULT_Y_BEGIN = 232,
                RESULT_Y_END = 247;
 					
+					
+	 
+					
 	 
 	 
 	 //current display color: in the display area and out of the area
@@ -95,12 +98,6 @@ module disp_chess_board(
 		.douta(douta)// output [11:0] douta
    );
 	
-	font U9 (
-	.a(a),
-	.spo(spo)
-		
-	);
-	
 	chess_piece U4(
 		.clk(clk),
 		.x(x),
@@ -108,6 +105,12 @@ module disp_chess_board(
 		.col(col),
 		.row(row),
 		.judge(judge)
+	);
+	
+	font U5 (
+	.a(a),
+	.spo(spo)
+		
 	);
 	
 	always@(x or y)begin
@@ -179,7 +182,7 @@ module disp_chess_board(
 	always @ (posedge clk) begin
         if (x >= GRID_X_BEGIN && x <= GRID_X_END &&
             y >= GRID_Y_BEGIN && y <= GRID_Y_END) begin
-            // Draw the chessboard   1 means black win 2 means white win 
+	// Draw the chessboard   1 means black win 2 means white win 
 				if(who_win==2'd1)
 					begin 
 						if (x >= RESULT_X_BEGIN & y >= RESULT_Y_BEGIN &

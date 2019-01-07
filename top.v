@@ -21,22 +21,23 @@
 module top(
 
     input wire clk,         // Clock (100MHz)
-    input wire rst,         // Reset button, 0 = pressed, 1 = released
+    //input wire rst,         // Reset button, 0 = pressed, 1 = released
     input wire ps2_clk,     // PS2 clock
     input wire ps2_data,    // PS2 data
     output wire sync_h,     // VGA horizontal sync
     output wire sync_v,     // VGA vertical sync
     output wire [3:0] r,    // VGA red component
     output wire [3:0] g,    // VGA green component
-    output wire [3:0] b   // VGA blue component
-	  
+    output wire [3:0] b,  // VGA blue component
 	 //for test 
-	 //output wire seg_clk,
-	 //output wire seg_sout,
-	 //output wire SEG_PEN,
-	 //output wire seg_clrn
+	 output wire seg_clk,
+	 output wire seg_sout,
+	 output wire SEG_PEN,
+	 output wire seg_clrn
     );
     
+	 reg rst;
+	 wire [3:0] whichkey;
     wire [31:0] clk_div;
 	 wire [224:0] display_black,display_white,disp;
 	 wire [3:0] choose_row,choose_col,choose_row1,choose_col1,choose_row2,choose_col2;
@@ -49,8 +50,11 @@ module top(
 	 assign have_chess_black = display_black[choose_row*15+choose_col];
 	 assign choose_row = (is_player) ? choose_row1 : choose_row2;
     assign choose_col = (is_player) ? choose_col1 : choose_col2;
-	 //assign disp = (is_player) ? display_black : display_white;
+	 assign disp = (is_player) ? display_black : display_white;
 	 assign pressed = (is_player) ? pressed1 : pressed2;
+	 always @ (*) begin rst = (whichkey == 4'h6)? 0 : 1;
+	 end
+	 
 	 
     disp_chess_board
         display(
@@ -72,11 +76,28 @@ module top(
     clk_div
         divider(
             .clk(clk),
-            .rst(rst),
+            .rst(1'b1),
             .clk_div(clk_div)
         );
-	
-	 player player1 (
+	 
+	 
+	 ps2_input
+		  myinputforrst (
+            .clk_slow(clk_div[16]),
+            .clk_fast(clk_div[6]),
+            .rst(1'b1),
+            .ps2_clk(ps2_clk),
+            .ps2_data(ps2_data),
+            .key_up(key_up),
+            .key_down(key_down),
+            .key_left(key_left),
+            .key_right(key_right),
+            .key_ok(key_ok),
+            .key_switch(key_switch),
+				.whichkey(whichkey)
+			);
+
+	 /*player player1 (
 			  .clk(clk), 
 			  .rst(rst), 
 			  .ps2_clk(ps2_clk), 
@@ -87,7 +108,18 @@ module top(
 			  .choose_row(choose_row1), 
 			  .choose_col(choose_col1), 
 			  .pressed(pressed1)
-		  );
+		  );*/
+		  
+	aiGo ai1 (
+		 .reset(rst),
+		 .clk(clk_div[12]), 
+		 .humanIn(display_white), 
+		 .enable(is_player), 
+		 .AIOut(display_black), 
+		 .finish(pressed1),
+		 .x(choose_row1),
+		 .y(choose_col1)
+    );
 	 
 	 player player2 (
 		     .clk(clk), 
@@ -132,8 +164,8 @@ module top(
 			is_player <= ~is_player;
 
 	//LED输出对应功能键的数字
-	//SSeg7_Dev m4(.clk(clk),.rst(1'b0),.Start(clk_div[20]),.SW0(1'b1),.flash(1'b0),.Hexs({28'h0_00_00_00,whichkey[3],whichkey[2],whichkey[1],whichkey[0]}),
-	//.point(8'b1111_1111),.LES(8'b1111_1111),.seg_clk(seg_clk),.seg_sout(seg_sout),.SEG_PEN(SEG_PEN),.seg_clrn(seg_clrn));
+	SSeg7_Dev m4(.clk(clk),.rst(1'b0),.Start(clk_div[20]),.SW0(1'b1),.flash(1'b0),.Hexs({28'h0_00_00_00,whichkey[3],whichkey[2],whichkey[1],whichkey[0]}),
+	.point(8'b1111_1111),.LES(8'b1111_1111),.seg_clk(seg_clk),.seg_sout(seg_sout),.SEG_PEN(SEG_PEN),.seg_clrn(seg_clrn));
 	
 		
 endmodule

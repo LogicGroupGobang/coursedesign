@@ -10,7 +10,7 @@ Target Device  : xc7k160t
 Target Package : ffg676
 Target Speed   : -1
 Mapper Version : kintex7 -- $Revision: 1.55 $
-Mapped Date    : Fri Jan 04 19:22:16 2019
+Mapped Date    : Sun Jan 06 16:15:18 2019
 
 Mapping design into LUTs...
 Running directed packing...
@@ -19,56 +19,87 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 1 mins 5 secs 
-Total CPU  time at the beginning of Placer: 1 mins 3 secs 
+Total REAL time at the beginning of Placer: 40 secs 
+Total CPU  time at the beginning of Placer: 40 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:92b9beaf) REAL time: 1 mins 15 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ed4aaf1d) REAL time: 46 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:92b9beaf) REAL time: 1 mins 15 secs 
+Phase 2.7  Design Feasibility Check (Checksum:ed4aaf1d) REAL time: 47 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:92b9beaf) REAL time: 1 mins 15 secs 
+Phase 3.31  Local Placement Optimization (Checksum:ed4aaf1d) REAL time: 47 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:9ed39dfa) REAL time: 1 mins 29 secs 
+(Checksum:15b32949) REAL time: 56 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:9ed39dfa) REAL time: 1 mins 29 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:15b32949) REAL time: 56 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:9ed39dfa) REAL time: 1 mins 30 secs 
+Phase 6.3  Local Placement Optimization (Checksum:15b32949) REAL time: 56 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:9ed39dfa) REAL time: 1 mins 30 secs 
+Phase 7.5  Local Placement Optimization (Checksum:15b32949) REAL time: 57 secs 
 
 Phase 8.8  Global Placement
-........................................
-...............................
-.................................................................
-.....................................................................................................................................................................................................................
-..........................................................................................................................................................................................................
-Phase 8.8  Global Placement (Checksum:2aa3ed72) REAL time: 3 mins 
+................................
+............................................................................................
+.......................................................................................................................................................................................
+..............................................................................................................................................................................................................
+Phase 8.8  Global Placement (Checksum:acad824f) REAL time: 1 mins 51 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:2aa3ed72) REAL time: 3 mins 1 secs 
+Phase 9.5  Local Placement Optimization (Checksum:acad824f) REAL time: 1 mins 51 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:cc1e35d2) REAL time: 4 mins 6 secs 
+Phase 10.18  Placement Optimization (Checksum:5ba04acf) REAL time: 2 mins 26 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:cc1e35d2) REAL time: 4 mins 6 secs 
+Phase 11.5  Local Placement Optimization (Checksum:5ba04acf) REAL time: 2 mins 27 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:cc1e35d2) REAL time: 4 mins 7 secs 
+Phase 12.34  Placement Validation (Checksum:5ba04acf) REAL time: 2 mins 27 secs 
 
-Total REAL time to Placer completion: 4 mins 31 secs 
-Total CPU  time to Placer completion: 4 mins 26 secs 
+Total REAL time to Placer completion: 2 mins 56 secs 
+Total CPU  time to Placer completion: 2 mins 56 secs 
 Running post-placement packing...
 Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/aHmJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/cHmJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/bHmJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/dHmJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/aAiJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/cAiJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/bAiJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ai1/dAiJudge/GND_15_o_GND_15_o_OR_114_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net pressed is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
@@ -78,34 +109,34 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    9
 Slice Logic Utilization:
-  Number of Slice Registers:                   870 out of 202,800    1%
-    Number used as Flip Flops:                 740
-    Number used as Latches:                      0
+  Number of Slice Registers:                 1,176 out of 202,800    1%
+    Number used as Flip Flops:               1,021
+    Number used as Latches:                     24
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:              130
-  Number of Slice LUTs:                      5,183 out of 101,400    5%
-    Number used as logic:                    5,172 out of 101,400    5%
-      Number using O6 output only:           4,550
-      Number using O5 output only:              94
-      Number using O5 and O6:                  528
+    Number used as AND/OR logics:              131
+  Number of Slice LUTs:                     12,062 out of 101,400   11%
+    Number used as logic:                   12,048 out of 101,400   11%
+      Number using O6 output only:          10,631
+      Number using O5 output only:              84
+      Number using O5 and O6:                1,333
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  35,000    0%
-    Number used exclusively as route-thrus:     11
+    Number used exclusively as route-thrus:     14
       Number with same-slice register load:      0
-      Number with same-slice carry load:        11
+      Number with same-slice carry load:        14
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,761 out of  25,350    6%
-  Number of LUT Flip Flop pairs used:        5,219
-    Number with an unused Flip Flop:         4,372 out of   5,219   83%
-    Number with an unused LUT:                  36 out of   5,219    1%
-    Number of fully used LUT-FF pairs:         811 out of   5,219   15%
-    Number of unique control sets:              37
+  Number of occupied Slices:                 3,842 out of  25,350   15%
+  Number of LUT Flip Flop pairs used:       12,115
+    Number with an unused Flip Flop:        11,013 out of  12,115   90%
+    Number with an unused LUT:                  53 out of  12,115    1%
+    Number of fully used LUT-FF pairs:       1,049 out of  12,115    8%
+    Number of unique control sets:              48
     Number of slice register sites lost
-      to control set restrictions:             188 out of 202,800    1%
+      to control set restrictions:             235 out of 202,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -116,8 +147,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        18 out of     400    4%
-    Number of LOCed IOBs:                       18 out of      18  100%
+  Number of bonded IOBs:                        21 out of     400    5%
+    Number of LOCed IOBs:                       21 out of      21  100%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                 77 out of     325   23%
@@ -126,8 +157,8 @@ Specific Feature Utilization:
   Number of RAMB18E1/FIFO18E1s:                  3 out of     650    1%
     Number using RAMB18E1 only:                  3
     Number using FIFO18E1 only:                  0
-  Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
-    Number used as BUFGs:                        4
+  Number of BUFG/BUFGCTRLs:                      5 out of      32   15%
+    Number used as BUFGs:                        5
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     400    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     400    0%
@@ -158,11 +189,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                6.83
+Average Fanout of Non-Clock Nets:                8.06
 
-Peak Memory Usage:  5271 MB
-Total REAL time to MAP completion:  4 mins 40 secs 
-Total CPU time to MAP completion:   4 mins 34 secs 
+Peak Memory Usage:  5359 MB
+Total REAL time to MAP completion:  3 mins 6 secs 
+Total CPU time to MAP completion:   3 mins 6 secs 
 
 Mapping completed.
 See MAP report file "top_map.mrp" for details.
