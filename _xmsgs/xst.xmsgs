@@ -5,124 +5,124 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"F:\coursedesign\top.v" Line 55: Port <arg fmt="%s" index="1">data_ram_we</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v" Line 55: Port <arg fmt="%s" index="1">data_ram_we</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"F:\coursedesign\ipcore_dir\rom_cb.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">rom_cb</arg>&gt; remains a black box.
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ipcore_dir\rom_cb.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">rom_cb</arg>&gt; remains a black box.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"F:\coursedesign\ipcore_dir\font.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">font</arg>&gt; remains a black box.
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ipcore_dir\font.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">font</arg>&gt; remains a black box.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"F:\coursedesign\chesspiece.v" Line 39: Using initial value of <arg fmt="%s" index="1">radius</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v" Line 39: Using initial value of <arg fmt="%s" index="1">radius</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\chesspiece.v" Line 42: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v" Line 42: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\chesspiece.v" Line 43: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v" Line 43: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 189: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 189: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 197: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 197: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 205: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 205: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 213: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 213: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 221: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 221: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 229: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 229: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 237: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 237: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 245: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 245: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 253: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 253: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 266: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 266: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 274: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 274: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 282: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 282: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 290: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 290: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 298: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 298: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 306: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 306: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 314: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 314: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 322: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 322: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"F:\coursedesign\disp_chess_board.v" Line 330: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 330: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 347: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 347: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 52: Assignment to <arg fmt="%s" index="1">key_up</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 52: Assignment to <arg fmt="%s" index="1">key_up</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 53: Assignment to <arg fmt="%s" index="1">key_down</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 53: Assignment to <arg fmt="%s" index="1">key_down</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 54: Assignment to <arg fmt="%s" index="1">key_left</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 54: Assignment to <arg fmt="%s" index="1">key_left</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 55: Assignment to <arg fmt="%s" index="1">key_right</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 55: Assignment to <arg fmt="%s" index="1">key_right</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 56: Assignment to <arg fmt="%s" index="1">key_ok</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 56: Assignment to <arg fmt="%s" index="1">key_ok</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 57: Assignment to <arg fmt="%s" index="1">key_switch</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 57: Assignment to <arg fmt="%s" index="1">key_switch</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="old" >"F:\coursedesign\top.v" Line 56: Input port <arg fmt="%s" index="1">data_ram_we</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v" Line 56: Input port <arg fmt="%s" index="1">data_ram_we</arg> is not connected on this instance
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">56</arg>: Output port &lt;<arg fmt="%s" index="3">douta</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">display</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">56</arg>: Output port &lt;<arg fmt="%s" index="3">douta</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">display</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_down</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_down</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_left</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_left</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_right</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_right</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_ok</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_ok</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_switch</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_switch</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ch&lt;14:11&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

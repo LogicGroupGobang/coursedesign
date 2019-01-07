@@ -4,7 +4,6 @@ font.asy
 font.gise
 font.mif
 font.ngc
-font.sym
 font.v
 font.veo
 font.xco

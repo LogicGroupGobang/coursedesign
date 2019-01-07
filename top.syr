@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.29 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.29 secs
  
 --> Reading design: top.prj
 
@@ -108,39 +108,39 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "F:\coursedesign\ps2_scan.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ps2_scan.v" into library work
 Parsing module <ps2_scan>.
-Analyzing Verilog file "F:\coursedesign\vga_sync.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\vga_sync.v" into library work
 Parsing module <vga_sync>.
-Analyzing Verilog file "F:\coursedesign\upper_left_to_lower_right.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\upper_left_to_lower_right.v" into library work
 Parsing module <upper_left_to_lower_right>.
-Analyzing Verilog file "F:\coursedesign\ps2_input.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ps2_input.v" into library work
 Parsing module <ps2_input>.
-Analyzing Verilog file "F:\coursedesign\lower_left_to_upper_right.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\lower_left_to_upper_right.v" into library work
 Parsing module <lower_left_to_upper_right>.
-Analyzing Verilog file "F:\coursedesign\ipcore_dir\rom_cb.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ipcore_dir\rom_cb.v" into library work
 Parsing module <rom_cb>.
-Analyzing Verilog file "F:\coursedesign\ipcore_dir\font.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ipcore_dir\font.v" into library work
 Parsing module <font>.
-Analyzing Verilog file "F:\coursedesign\horizontal_vertical.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\horizontal_vertical.v" into library work
 Parsing module <horizontal_vertical>.
-Analyzing Verilog file "F:\coursedesign\clk_div.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\clk_div.v" into library work
 Parsing module <clk_div>.
-Analyzing Verilog file "F:\coursedesign\chesspiece.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v" into library work
 Parsing module <chess_piece>.
-Analyzing Verilog file "F:\coursedesign\win_checker.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\win_checker.v" into library work
 Parsing module <win_checker>.
-Analyzing Verilog file "F:\coursedesign\player.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" into library work
 Parsing module <player>.
-Analyzing Verilog file "F:\coursedesign\disp_chess_board.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" into library work
 Parsing module <disp_chess_board>.
-Analyzing Verilog file "F:\coursedesign\top.v" into library work
+Analyzing Verilog file "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v" into library work
 Parsing module <top>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "F:\coursedesign\top.v" Line 55: Port data_ram_we is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v" Line 55: Port data_ram_we is not connected to this instance
 
 Elaborating module <top>.
 
@@ -149,34 +149,34 @@ Elaborating module <disp_chess_board>.
 Elaborating module <vga_sync>.
 
 Elaborating module <rom_cb>.
-WARNING:HDLCompiler:1499 - "F:\coursedesign\ipcore_dir\rom_cb.v" Line 39: Empty module <rom_cb> remains a black box.
+WARNING:HDLCompiler:1499 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ipcore_dir\rom_cb.v" Line 39: Empty module <rom_cb> remains a black box.
 
 Elaborating module <font>.
-WARNING:HDLCompiler:1499 - "F:\coursedesign\ipcore_dir\font.v" Line 39: Empty module <font> remains a black box.
+WARNING:HDLCompiler:1499 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ipcore_dir\font.v" Line 39: Empty module <font> remains a black box.
 
 Elaborating module <chess_piece>.
-WARNING:HDLCompiler:872 - "F:\coursedesign\chesspiece.v" Line 39: Using initial value of radius since it is never assigned
-WARNING:HDLCompiler:413 - "F:\coursedesign\chesspiece.v" Line 42: Result of 32-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\chesspiece.v" Line 43: Result of 32-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 189: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 197: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 205: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 213: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 221: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 229: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 237: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 245: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 253: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 266: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 274: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 282: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 290: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 298: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 306: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 314: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 322: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 330: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "F:\coursedesign\disp_chess_board.v" Line 347: Result of 32-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:872 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v" Line 39: Using initial value of radius since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v" Line 42: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v" Line 43: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 189: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 197: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 205: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 213: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 221: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 229: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 237: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 245: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 253: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 266: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 274: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 282: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 290: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 298: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 306: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 314: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 322: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 330: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v" Line 347: Result of 32-bit expression is truncated to fit in 18-bit target.
 
 Elaborating module <clk_div>.
 
@@ -185,12 +185,12 @@ Elaborating module <player>.
 Elaborating module <ps2_input>.
 
 Elaborating module <ps2_scan>.
-WARNING:HDLCompiler:1127 - "F:\coursedesign\player.v" Line 52: Assignment to key_up ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "F:\coursedesign\player.v" Line 53: Assignment to key_down ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "F:\coursedesign\player.v" Line 54: Assignment to key_left ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "F:\coursedesign\player.v" Line 55: Assignment to key_right ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "F:\coursedesign\player.v" Line 56: Assignment to key_ok ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "F:\coursedesign\player.v" Line 57: Assignment to key_switch ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 52: Assignment to key_up ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 53: Assignment to key_down ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 54: Assignment to key_left ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 55: Assignment to key_right ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 56: Assignment to key_ok ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" Line 57: Assignment to key_switch ignored, since the identifier is never used
 
 Elaborating module <win_checker>.
 
@@ -199,15 +199,15 @@ Elaborating module <horizontal_vertical>.
 Elaborating module <upper_left_to_lower_right>.
 
 Elaborating module <lower_left_to_upper_right>.
-WARNING:HDLCompiler:552 - "F:\coursedesign\top.v" Line 56: Input port data_ram_we is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v" Line 56: Input port data_ram_we is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <top>.
-    Related source file is "F:\coursedesign\top.v".
-INFO:Xst:3210 - "F:\coursedesign\top.v" line 56: Output port <douta> of the instance <display> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v".
+INFO:Xst:3210 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\top.v" line 56: Output port <douta> of the instance <display> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <is_player>.
     Found 2-bit register for signal <who_win>.
     Found 8-bit adder for signal <choose_row[3]_GND_1_o_add_1_OUT> created at line 48.
@@ -222,7 +222,7 @@ INFO:Xst:3210 - "F:\coursedesign\top.v" line 56: Output port <douta> of the inst
 Unit <top> synthesized.
 
 Synthesizing Unit <disp_chess_board>.
-    Related source file is "F:\coursedesign\disp_chess_board.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\disp_chess_board.v".
     Found 12-bit register for signal <rgb>.
     Found 18-bit register for signal <ram_addr>.
     Found 15-bit register for signal <a>.
@@ -371,7 +371,7 @@ Synthesizing Unit <disp_chess_board>.
 Unit <disp_chess_board> synthesized.
 
 Synthesizing Unit <vga_sync>.
-    Related source file is "F:\coursedesign\vga_sync.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\vga_sync.v".
     Found 10-bit register for signal <y>.
     Found 10-bit register for signal <x>.
     Found 10-bit adder for signal <x[9]_GND_4_o_add_7_OUT> created at line 44.
@@ -390,7 +390,7 @@ Synthesizing Unit <vga_sync>.
 Unit <vga_sync> synthesized.
 
 Synthesizing Unit <chess_piece>.
-    Related source file is "F:\coursedesign\chesspiece.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\chesspiece.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 11-bit subtractor for signal <GND_7_o_GND_7_o_sub_1_OUT> created at line 42.
     Found 32-bit subtractor for signal <GND_7_o_GND_7_o_sub_3_OUT> created at line 42.
@@ -409,7 +409,7 @@ WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and lef
 Unit <chess_piece> synthesized.
 
 Synthesizing Unit <clk_div>.
-    Related source file is "F:\coursedesign\clk_div.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\clk_div.v".
     Found 32-bit register for signal <clk_div>.
     Found 32-bit adder for signal <clk_div[31]_GND_11_o_add_0_OUT> created at line 31.
     Summary:
@@ -418,13 +418,13 @@ Synthesizing Unit <clk_div>.
 Unit <clk_div> synthesized.
 
 Synthesizing Unit <player>.
-    Related source file is "F:\coursedesign\player.v".
-INFO:Xst:3210 - "F:\coursedesign\player.v" line 46: Output port <key_up> of the instance <myinput> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\coursedesign\player.v" line 46: Output port <key_down> of the instance <myinput> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\coursedesign\player.v" line 46: Output port <key_left> of the instance <myinput> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\coursedesign\player.v" line 46: Output port <key_right> of the instance <myinput> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\coursedesign\player.v" line 46: Output port <key_ok> of the instance <myinput> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\coursedesign\player.v" line 46: Output port <key_switch> of the instance <myinput> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v".
+INFO:Xst:3210 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" line 46: Output port <key_up> of the instance <myinput> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" line 46: Output port <key_down> of the instance <myinput> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" line 46: Output port <key_left> of the instance <myinput> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" line 46: Output port <key_right> of the instance <myinput> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" line 46: Output port <key_ok> of the instance <myinput> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\player.v" line 46: Output port <key_switch> of the instance <myinput> is unconnected or connected to loadless signal.
     Found 4-bit register for signal <choose_col>.
     Found 4-bit register for signal <choose_row>.
     Found 4-bit register for signal <last_key>.
@@ -452,7 +452,7 @@ INFO:Xst:3210 - "F:\coursedesign\player.v" line 46: Output port <key_switch> of 
 Unit <player> synthesized.
 
 Synthesizing Unit <ps2_input>.
-    Related source file is "F:\coursedesign\ps2_input.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ps2_input.v".
     Found 2-bit register for signal <key_down_state>.
     Found 2-bit register for signal <key_left_state>.
     Found 2-bit register for signal <key_right_state>.
@@ -466,7 +466,7 @@ Synthesizing Unit <ps2_input>.
 Unit <ps2_input> synthesized.
 
 Synthesizing Unit <ps2_scan>.
-    Related source file is "F:\coursedesign\ps2_scan.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\ps2_scan.v".
     Found 4-bit register for signal <read_state>.
     Found 8-bit register for signal <read_data>.
     Found 9-bit register for signal <crt_data>.
@@ -487,13 +487,13 @@ Synthesizing Unit <ps2_scan>.
 Unit <ps2_scan> synthesized.
 
 Synthesizing Unit <win_checker>.
-    Related source file is "F:\coursedesign\win_checker.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\win_checker.v".
     Summary:
 	no macro.
 Unit <win_checker> synthesized.
 
 Synthesizing Unit <horizontal_vertical>.
-    Related source file is "F:\coursedesign\horizontal_vertical.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\horizontal_vertical.v".
     Found 8-bit adder for signal <row[3]_GND_17_o_add_3_OUT> created at line 28.
     Found 8-bit adder for signal <row[3]_GND_17_o_add_6_OUT> created at line 28.
     Found 8-bit adder for signal <row[3]_GND_17_o_add_9_OUT> created at line 28.
@@ -559,7 +559,7 @@ Synthesizing Unit <horizontal_vertical>.
 Unit <horizontal_vertical> synthesized.
 
 Synthesizing Unit <upper_left_to_lower_right>.
-    Related source file is "F:\coursedesign\upper_left_to_lower_right.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\upper_left_to_lower_right.v".
 WARNING:Xst:647 - Input <ch<14:11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ch<29:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ch<44:43>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -580,7 +580,7 @@ WARNING:Xst:647 - Input <ch<213:210>> is never used. This port will be preserved
 Unit <upper_left_to_lower_right> synthesized.
 
 Synthesizing Unit <lower_left_to_upper_right>.
-    Related source file is "F:\coursedesign\lower_left_to_upper_right.v".
+    Related source file is "C:\Users\hc\Desktop\coursedesign-master\coursedesign-master\lower_left_to_upper_right.v".
 WARNING:Xst:647 - Input <ch<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ch<17:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ch<31:30>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -990,7 +990,7 @@ Asynchronous Control Signals Information:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                         | Buffer(FF name)                                                                                                                                      | Load  |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_14102(display/U3/XST_GND:G)                                                                                                                                                     | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 136   |
+display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_14102(display/U3/XST_GND:G)                                                                                                                                                     | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[59].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 136   |
 display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
 display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
 display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/cascadelata_tmp(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(display/U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
@@ -1459,12 +1459,12 @@ pressed        |    1.309|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 53.00 secs
-Total CPU time to Xst completion: 52.73 secs
+Total REAL time to Xst completion: 95.00 secs
+Total CPU time to Xst completion: 94.73 secs
  
 --> 
 
-Total memory usage is 4720344 kilobytes
+Total memory usage is 4689248 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   97 (   0 filtered)
