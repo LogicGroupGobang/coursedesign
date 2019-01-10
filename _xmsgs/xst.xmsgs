@@ -5,172 +5,172 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 59: Port <arg fmt="%s" index="1">data_ram_we</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"F:\coursedesign\top.v" Line 59: Port <arg fmt="%s" index="1">data_ram_we</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 49: Assignment to <arg fmt="%s" index="1">have_chess_white</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 49: Assignment to <arg fmt="%s" index="1">have_chess_white</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 53: Assignment to <arg fmt="%s" index="1">disp</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 53: Assignment to <arg fmt="%s" index="1">disp</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 55: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\top.v" Line 55: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\ipcore_dir\rom_cb.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">rom_cb</arg>&gt; remains a black box.
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"F:\coursedesign\ipcore_dir\rom_cb.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">rom_cb</arg>&gt; remains a black box.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\chesspiece.v" Line 39: Using initial value of <arg fmt="%s" index="1">radius</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"F:\coursedesign\chesspiece.v" Line 39: Using initial value of <arg fmt="%s" index="1">radius</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\chesspiece.v" Line 42: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\chesspiece.v" Line 42: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\chesspiece.v" Line 43: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\chesspiece.v" Line 43: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\ipcore_dir\font.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">font</arg>&gt; remains a black box.
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"F:\coursedesign\ipcore_dir\font.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">font</arg>&gt; remains a black box.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 192: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 192: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 200: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 200: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 208: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 208: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 216: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 216: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 224: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 224: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 232: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 232: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 240: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 240: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 248: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 248: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 256: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 256: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 269: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 269: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 277: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 277: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 285: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 285: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 293: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 293: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 301: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 301: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 309: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 309: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 317: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 317: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 325: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 325: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 333: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 333: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\disp_chess_board.v" Line 350: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\disp_chess_board.v" Line 350: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 91: Assignment to <arg fmt="%s" index="1">key_up</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 91: Assignment to <arg fmt="%s" index="1">key_up</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 92: Assignment to <arg fmt="%s" index="1">key_down</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 92: Assignment to <arg fmt="%s" index="1">key_down</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 93: Assignment to <arg fmt="%s" index="1">key_left</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 93: Assignment to <arg fmt="%s" index="1">key_left</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 94: Assignment to <arg fmt="%s" index="1">key_right</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 94: Assignment to <arg fmt="%s" index="1">key_right</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 95: Assignment to <arg fmt="%s" index="1">key_ok</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 95: Assignment to <arg fmt="%s" index="1">key_ok</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 96: Assignment to <arg fmt="%s" index="1">key_switch</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\top.v" Line 96: Assignment to <arg fmt="%s" index="1">key_switch</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\aiGo.v" Line 148: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\aiGo.v" Line 148: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\aiGo.v" Line 154: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\aiGo.v" Line 154: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\aiGo.v" Line 276: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\aiGo.v" Line 276: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\aiGo.v" Line 291: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\aiGo.v" Line 291: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\aiGo.v" Line 292: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\aiGo.v" Line 292: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\aiGo.v" Line 301: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\aiGo.v" Line 301: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\aiGo.v" Line 307: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\coursedesign\aiGo.v" Line 307: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v" Line 52: Assignment to <arg fmt="%s" index="1">key_up</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 52: Assignment to <arg fmt="%s" index="1">key_up</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v" Line 53: Assignment to <arg fmt="%s" index="1">key_down</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 53: Assignment to <arg fmt="%s" index="1">key_down</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v" Line 54: Assignment to <arg fmt="%s" index="1">key_left</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 54: Assignment to <arg fmt="%s" index="1">key_left</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v" Line 55: Assignment to <arg fmt="%s" index="1">key_right</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 55: Assignment to <arg fmt="%s" index="1">key_right</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v" Line 56: Assignment to <arg fmt="%s" index="1">key_ok</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 56: Assignment to <arg fmt="%s" index="1">key_ok</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v" Line 57: Assignment to <arg fmt="%s" index="1">key_switch</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\coursedesign\player.v" Line 57: Assignment to <arg fmt="%s" index="1">key_switch</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\SSeg7_Dev_IO.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">SSeg7_Dev</arg>&gt; remains a black box.
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"F:\coursedesign\SSeg7_Dev_IO.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">SSeg7_Dev</arg>&gt; remains a black box.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="old" >"C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v" Line 60: Input port <arg fmt="%s" index="1">data_ram_we</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"F:\coursedesign\top.v" Line 60: Input port <arg fmt="%s" index="1">data_ram_we</arg> is not connected on this instance
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">douta</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">display</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">douta</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">display</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_down</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_down</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_left</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_left</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_right</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_right</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_ok</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_ok</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_switch</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\top.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">key_switch</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinputforrst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -188,22 +188,22 @@
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">type&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_up</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_down</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_down</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_left</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_left</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_right</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_right</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_ok</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_ok</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\hc\Documents\Tencent Files\763256876\FileRecv\AIgoBang\AIgoBang\coursedesign-master\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_switch</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\coursedesign\player.v</arg>&quot; line <arg fmt="%s" index="2">46</arg>: Output port &lt;<arg fmt="%s" index="3">key_switch</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">myinput</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ch&lt;14:11&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -300,12 +300,6 @@
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">bAi_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">aiGo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;bHm_4&gt; </arg>
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">myinput/whichkey_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">player</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">last_key_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">player</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider/clk_div_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">player</arg>&gt;.
@@ -555,9 +549,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">maxAiForHm_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">aiGo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">myinputforrst/whichkey_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider/clk_div_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.

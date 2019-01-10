@@ -52,7 +52,7 @@ module top(
     assign choose_col = (is_player) ? choose_col1 : choose_col2;
 	 assign disp = (is_player) ? display_black : display_white;
 	 assign pressed = (is_player) ? pressed1 : pressed2;
-	 always @ (*) begin rst = (whichkey == 4'h6)? 0 : 1;
+	 always @ (*) begin rst = (whichkey == 4'b1010)? 0 : 1;
 	 end
 	 
 	 

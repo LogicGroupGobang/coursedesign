@@ -10,39 +10,39 @@ Target Device  : xc7k160t
 Target Package : ffg676
 Target Speed   : -1
 Mapper Version : kintex7 -- $Revision: 1.55 $
-Mapped Date    : Sun Jan 06 16:15:18 2019
+Mapped Date    : Thu Jan 10 13:51:32 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    9
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,176 out of 202,800    1%
-    Number used as Flip Flops:               1,021
+  Number of Slice Registers:                 1,178 out of 202,800    1%
+    Number used as Flip Flops:               1,023
     Number used as Latches:                     24
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:              131
-  Number of Slice LUTs:                     12,062 out of 101,400   11%
-    Number used as logic:                   12,048 out of 101,400   11%
-      Number using O6 output only:          10,631
-      Number using O5 output only:              84
-      Number using O5 and O6:                1,333
+  Number of Slice LUTs:                     12,069 out of 101,400   11%
+    Number used as logic:                   12,053 out of 101,400   11%
+      Number using O6 output only:          10,630
+      Number using O5 output only:              88
+      Number using O5 and O6:                1,335
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  35,000    0%
-    Number used exclusively as route-thrus:     14
-      Number with same-slice register load:      0
-      Number with same-slice carry load:        14
+    Number used exclusively as route-thrus:     16
+      Number with same-slice register load:      1
+      Number with same-slice carry load:        15
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,842 out of  25,350   15%
-  Number of LUT Flip Flop pairs used:       12,115
-    Number with an unused Flip Flop:        11,013 out of  12,115   90%
-    Number with an unused LUT:                  53 out of  12,115    1%
-    Number of fully used LUT-FF pairs:       1,049 out of  12,115    8%
+  Number of occupied Slices:                 3,729 out of  25,350   14%
+  Number of LUT Flip Flop pairs used:       12,128
+    Number with an unused Flip Flop:        11,023 out of  12,128   90%
+    Number with an unused LUT:                  59 out of  12,128    1%
+    Number of fully used LUT-FF pairs:       1,046 out of  12,128    8%
     Number of unique control sets:              48
     Number of slice register sites lost
-      to control set restrictions:             235 out of 202,800    1%
+      to control set restrictions:             225 out of 202,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -97,9 +97,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                8.06
 
-Peak Memory Usage:  5359 MB
-Total REAL time to MAP completion:  3 mins 6 secs 
-Total CPU time to MAP completion:   3 mins 6 secs 
+Peak Memory Usage:  5377 MB
+Total REAL time to MAP completion:  3 mins 9 secs 
+Total CPU time to MAP completion:   3 mins 3 secs 
 
 Table of Contents
 -----------------
@@ -171,7 +171,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
   14 block(s) removed
- 302 block(s) optimized away
+ 294 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -501,15 +501,7 @@ AND4 		m4/SM1/HTS6/MSEG/XLXI_7
 AND4 		m4/SM1/HTS6/MSEG/XLXI_8
 LUT2 		m4/SM1/HTS6/en1
    optimized to 0
-INV 		m4/SM1/HTS7/MSEG/XLXI_1
-AND3 		m4/SM1/HTS7/MSEG/XLXI_20
-AND3 		m4/SM1/HTS7/MSEG/XLXI_21
-AND3 		m4/SM1/HTS7/MSEG/XLXI_24
-AND4 		m4/SM1/HTS7/MSEG/XLXI_28
-AND4 		m4/SM1/HTS7/MSEG/XLXI_44
 INV 		m4/SM1/HTS7/MSEG/XLXI_57
-AND4 		m4/SM1/HTS7/MSEG/XLXI_7
-AND4 		m4/SM1/HTS7/MSEG/XLXI_8
 LUT2 		m4/SM1/HTS7/en1
    optimized to 0
 VCC 		m4/XST_VCC

@@ -66,7 +66,7 @@ module ps2_input(
 				else if (key_left_state[0] | key_left_state[1]) whichkey <= 4'h3;
 				else if (key_right_state[0] | key_right_state[1]) whichkey <= 4'h4;
 				else if (key_ok_state[0] | key_ok_state[1]) whichkey <= 4'h5;
-				else if (key_switch_state[0] | key_switch_state[1]) whichkey <= 4'h6;
+				else if (key_switch_state[0] | key_switch_state[1]) whichkey <= 4'b1010;
 				else whichkey <= 4'h0;
         end
 

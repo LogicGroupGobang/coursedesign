@@ -36,9 +36,9 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-SEG_PEN     |        11.075(R)|      SLOW  |         4.153(R)|      FAST  |clk_BUFGP         |   0.000|
-seg_clk     |        10.475(R)|      SLOW  |         3.944(R)|      FAST  |clk_BUFGP         |   0.000|
-seg_sout    |        10.098(R)|      SLOW  |         3.770(R)|      FAST  |clk_BUFGP         |   0.000|
+SEG_PEN     |        10.890(R)|      SLOW  |         4.100(R)|      FAST  |clk_BUFGP         |   0.000|
+seg_clk     |        10.053(R)|      SLOW  |         3.738(R)|      FAST  |clk_BUFGP         |   0.000|
+seg_sout    |        10.054(R)|      SLOW  |         3.741(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -46,18 +46,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.122|         |         |         |
+clk            |    7.100|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Jan 06 16:20:49 2019 
+Analysis completed Thu Jan 10 13:57:06 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 5270 MB
+Peak Memory Usage: 5271 MB
 
 
 

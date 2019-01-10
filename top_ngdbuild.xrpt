@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Sun Jan 06 16:15:15 2019">
+  <application stringID="NgdBuild" timeStamp="Thu Jan 10 13:50:41 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="E:\xlinxise\14.7\ISE_DS\ISE\\lib\nt64;E:\xlinxise\14.7\ISE_DS\ISE\\bin\nt64;E:\xlinxise\14.7\ISE_DS\ISE\bin\nt64;E:\xlinxise\14.7\ISE_DS\ISE\lib\nt64;E:\xlinxise\14.7\ISE_DS\ISE\..\..\..\DocNav;E:\xlinxise\14.7\ISE_DS\PlanAhead\bin;E:\xlinxise\14.7\ISE_DS\EDK\bin\nt64;E:\xlinxise\14.7\ISE_DS\EDK\lib\nt64;E:\xlinxise\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnuwin\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\arm\nt\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;E:\xlinxise\14.7\ISE_DS\common\bin\nt64;E:\xlinxise\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Java\jdk-11.0.1\bin;C:\Program Files\Java\jdk-11.0.1\jre\bin;C:\Program Files (x86)\Bitvise SSH Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\hc\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.1\bin;C:\Users\hc\AppData\Local\Programs\Microsoft VS Code\bin;&quot;C:\Program Files\Java\jdk-11.0.1\bin;C:\Program Files\Java\jdk-11.0.1\jre\bin&quot;"/>
+          <item stringID="value" value="E:\xlinxise\14.7\ISE_DS\ISE\\lib\nt64;E:\xlinxise\14.7\ISE_DS\ISE\\bin\nt64;E:\xlinxise\14.7\ISE_DS\ISE\bin\nt64;E:\xlinxise\14.7\ISE_DS\ISE\lib\nt64;E:\xlinxise\14.7\ISE_DS\ISE\..\..\..\DocNav;E:\xlinxise\14.7\ISE_DS\PlanAhead\bin;E:\xlinxise\14.7\ISE_DS\EDK\bin\nt64;E:\xlinxise\14.7\ISE_DS\EDK\lib\nt64;E:\xlinxise\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnuwin\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\arm\nt\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;E:\xlinxise\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;E:\xlinxise\14.7\ISE_DS\common\bin\nt64;E:\xlinxise\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Java\jdk-11.0.1\bin;C:\Program Files\Java\jdk-11.0.1\jre\bin;C:\Program Files (x86)\Bitvise SSH Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\hc\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.1\bin;C:\Users\hc\AppData\Local\Programs\Microsoft VS Code\bin;&quot;C:\Program Files\Java\jdk-11.0.1\bin;C:\Program Files\Java\jdk-11.0.1\jre\bin&quot;;C:\Users\hc\AppData\Local\GitHubDesktop\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -74,13 +74,13 @@
         <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_DSP48E1" value="5"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="113"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="59"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="509"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="58"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="510"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="294"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDPE" value="7"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="21"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDS" value="12"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDSE" value="6"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="2"/>
@@ -88,11 +88,11 @@
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="69"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LDP" value="24"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="84"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="564"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="1055"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="742"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1191"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="8574"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="566"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="1050"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="748"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1190"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="8575"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="1809"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="3047"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF8" value="1500"/>
@@ -112,13 +112,13 @@
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="5"/>
         <item dataType="int" stringID="NGDBUILD_NUM_DSP48E1" value="5"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="113"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="59"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="509"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="58"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="510"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="294"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDPE" value="7"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="21"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDS" value="12"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDSE" value="6"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="2"/>
@@ -127,11 +127,11 @@
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="69"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LDP" value="24"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="84"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="564"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="1055"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="742"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1191"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="8574"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="566"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="1050"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="748"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1190"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="8575"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="1809"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="3047"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF8" value="1500"/>
