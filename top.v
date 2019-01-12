@@ -37,7 +37,7 @@ module top(
     );
     
 	 reg rst;
-	 wire [3:0] whichkey;
+	 wire [3:0] whichkey;//keyboard for reset
     wire [31:0] clk_div;
 	 wire [224:0] display_black,display_white,disp;
 	 wire [3:0] choose_row,choose_col,choose_row1,choose_col1,choose_row2,choose_col2;
@@ -46,17 +46,17 @@ module top(
 	 wire pressed,pressed1,pressed2;
 	 wire have_chess_white,have_chess_black;
 	 
-	 assign have_chess_white = display_white[choose_row*15+choose_col];
+	 assign have_chess_white = display_white[choose_row*15+choose_col];//judge if this index has a chess
 	 assign have_chess_black = display_black[choose_row*15+choose_col];
-	 assign choose_row = (is_player) ? choose_row1 : choose_row2;
+	 assign choose_row = (is_player) ? choose_row1 : choose_row2;//the lastest index 
     assign choose_col = (is_player) ? choose_col1 : choose_col2;
 	 assign disp = (is_player) ? display_black : display_white;
-	 assign pressed = (is_player) ? pressed1 : pressed2;
-	 always @ (*) begin rst = (whichkey == 4'b1010)? 0 : 1;
+	 assign pressed = (is_player) ? pressed1 : pressed2;//if the key_ok is pressed 
+	 always @ (*) begin rst = (whichkey == 4'b1010)? 0 : 1;//reset
 	 end
 	 
 	 
-    disp_chess_board
+    disp_chess_board//VGA display module
         display(
             .clk(clk_div[1]),
             .rst(rst),
@@ -81,7 +81,7 @@ module top(
         );
 	 
 	 
-	 ps2_input
+	 ps2_input//reset
 		  myinputforrst (
             .clk_slow(clk_div[16]),
             .clk_fast(clk_div[6]),
@@ -110,7 +110,7 @@ module top(
 			  .pressed(pressed1)
 		  );*/
 		  
-	aiGo ai1 (
+	aiGo ai1 (//ai1 for black
 		 .reset(rst),
 		 .clk(clk_div[12]), 
 		 .humanIn(display_white), 
@@ -121,7 +121,7 @@ module top(
 		 .y(choose_col1)
     );
 	 
-	 player player2 (
+	 player player2 (//player2 for white
 		     .clk(clk), 
 		     .rst(rst), 
 		     .ps2_clk(ps2_clk), 
@@ -134,14 +134,14 @@ module top(
 		     .pressed(pressed2)
 		  );
 
-	 win_checker check1 (
+	 win_checker check1 (//check if ai1 is win
 			  .row(choose_row1), 
 			  .col(choose_col1), 
 			  .ch(display_black), 
 			  .win_check(win_check1)
         );
 	
-	 win_checker check2 (
+	 win_checker check2 (//check if player2 is win
 			  .row(choose_row2), 
 			  .col(choose_col2), 
 			  .ch(display_white), 
@@ -157,7 +157,7 @@ module top(
 			else if(win_check2)
 				who_win <= 2;		
 	
-	always@(posedge pressed or negedge rst)
+	always@(posedge pressed or negedge rst)//change the playing side
 		if(!rst) 
 			is_player <= 1'b1;
 		else 

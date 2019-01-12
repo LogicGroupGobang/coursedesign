@@ -42,7 +42,7 @@ module player(
          .clk_div(clk_div)
 		);
 		
-	 ps2_input
+	 ps2_input//ps2 module
 		  myinput(
             .clk_slow(clk_div[16]),
             .clk_fast(clk_div[6]),
@@ -60,39 +60,39 @@ module player(
 				
 	always@(posedge clk or negedge rst) begin
 		if(!rst) begin
-			disp = 225'b0;
-			choose_row <= 4'd7;
+			disp = 225'b0;//no chess in the board
+			choose_row <= 4'd7;//in the center
 			choose_col <= 4'd7;
-			last_key <= 4'b0;
-			pressed <= 1'b0;
+			last_key <= 4'b0;//the last key code
+			pressed <= 1'b0;//the key ok isn't pressed
 		end
 		else if(is_player&&whichkey!=last_key) 
 			case(whichkey)
-				4'd1:begin
+				4'd1:begin//move up
 						if(choose_row>=4'd1)
 							choose_row <= choose_row-4'd1;
 						last_key <= whichkey;
 						pressed <= 1'b0;
 					end
-				4'd2:begin
+				4'd2:begin//move down
 						if(choose_row<=4'd13)
 							choose_row <= choose_row+4'd1;
 						last_key <= whichkey;
 						pressed <= 1'b0;
 					end
-				4'd3:begin
+				4'd3:begin//move left
 						if(choose_col>=4'd1)
 							choose_col <= choose_col-4'd1;
 						last_key <= whichkey;
 						pressed <= 1'b0;
 					end
-				4'd4:begin
+				4'd4:begin//move right
 						if(choose_col<=4'd13)
 							choose_col <= choose_col+4'd1;
 						last_key <= whichkey;
 						pressed <= 1'b0;
 					end
-				4'd5:begin
+				4'd5:begin//press key ok
 						if(!have_chess&&!disp[choose_row*15+choose_col])begin
 							disp[choose_row*15+choose_col] = 1;
 							pressed <= 1'b1;

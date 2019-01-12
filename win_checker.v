@@ -24,19 +24,19 @@ module win_checker(
 	input wire [224:0] ch,//上一步下棋的棋手对应的棋面
 	output wire win_check
     );
-	horizontal_vertical U1 (
+	 horizontal_vertical U1 (//检测行/列上是否连五
     .row(row), 
     .col(col), 
     .ch(ch), 
     .win_check(check1)
     );
-	upper_left_to_lower_right U2 (
+	 upper_left_to_lower_right U2 (//检测左上到右下的斜向上是否连五
     .row(row), 
     .col(col), 
     .ch(ch), 
     .win_check(check2)
     );
-	 lower_left_to_upper_right U3 (
+	 lower_left_to_upper_right U3 (//检测右上到左下的斜向上是否连五
     .row(row), 
     .col(col), 
     .ch(ch), 
