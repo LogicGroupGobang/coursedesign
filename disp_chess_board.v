@@ -38,16 +38,18 @@ module disp_chess_board(
 	
 	  // Side parameters
 
-					
+			      //chess board display border			
     localparam GRID_X_BEGIN = 80,
                GRID_X_END = 559,
                GRID_Y_BEGIN = 0,
                GRID_Y_END = 479,
+					//line border
 					GRID_SIZE = 31,
 					SIDE_X_BEGIN = 102,
 					SIDE_X_END = 536,
 					SIDE_Y_BEGIN = 23,
 					SIDE_Y_END = 457,
+					//RESULT display border
 					RESULT_X_BEGIN = 280,
                RESULT_X_END = 359,
                RESULT_Y_BEGIN = 232,
@@ -77,6 +79,7 @@ module disp_chess_board(
 
  // VGA control signal generator
     wire video_on;
+ // the  coordinate in the display area
     wire [9:0] x, y;
     vga_sync
         sync(
@@ -113,7 +116,7 @@ module disp_chess_board(
 		
 	);
 	
-	always@(x or y)begin
+	always@(x or y)begin//calculate the scanning pixel in which (row,column)
 		if(y >= SIDE_Y_BEGIN-GRID_SIZE/2&&y <= SIDE_Y_BEGIN+GRID_SIZE/2)
 			row = 4'b0000;
 		else if(y >= SIDE_Y_BEGIN+GRID_SIZE/2&&y <= SIDE_Y_BEGIN+GRID_SIZE*3/2)
@@ -182,7 +185,7 @@ module disp_chess_board(
 	always @ (posedge clk) begin
         if (x >= GRID_X_BEGIN && x <= GRID_X_END &&
             y >= GRID_Y_BEGIN && y <= GRID_Y_END) begin
-	// Draw the chessboard   1 means black win 2 means white win 
+	// Draw the chessboard   1 means black wins 2 means white wins, in black font and white background, a char's size is 8*16
 				if(who_win==2'd1)
 					begin 
 						if (x >= RESULT_X_BEGIN & y >= RESULT_Y_BEGIN &
@@ -258,6 +261,7 @@ module disp_chess_board(
 							rgb <= 12'h000;
 						else rgb <= 12'hfff;
 						end
+						//the other area display in green
 						else rgb <= 12'h0f0;
 					end 
 				else if(who_win==2'd2)
@@ -335,22 +339,27 @@ module disp_chess_board(
 							rgb <= 12'h000;
 						else rgb <= 12'hfff;
 						end
+						//the other area display in blue
 				else
 					rgb <= 12'h00f;
 				end
+				// draw Pieces
 				else if(display_black[row*15+col]&&judge&&row!=4'b1111&&col!=4'b1111)
 					rgb <= 12'h000;
 				else if(display_white[row*15+col]&&judge&&row!=4'b1111&&col!=4'b1111)
 					rgb <= 12'hfff;
+				// draw the chess board	
 				else if(row==choose_row&&col==choose_col&&row!=4'b1111&&col!=4'b1111&&
 						(x-SIDE_X_BEGIN-col*GRID_SIZE==GRID_SIZE/2||x-col*GRID_SIZE+GRID_SIZE/2==SIDE_X_BEGIN
 						||y-SIDE_Y_BEGIN-row*GRID_SIZE==GRID_SIZE/2||y-row*GRID_SIZE+GRID_SIZE/2==SIDE_Y_BEGIN))
 					rgb <= 12'hf00;
+				//get the rga data from the ip core
 				else begin
 					ram_addr = y*480+(x-80) ;
 					rgb <= douta; 
 				end
 		  end
+		  //the display area is 640*480, but the chess board's size is only 480*480, the spare space display in white
 		else  rgb <= 12'hfff;
 	end
 	 
