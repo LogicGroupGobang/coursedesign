@@ -18,78 +18,61 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module aiGo(reset,clk,humanIn,enable,AIOut,finish,x,y);//,SCAI,SCHM,LOCAI,LOCHM,outState,valid,
-//isEmpty,MAXAI,MAXHM);//,//ata,ath,bta,bth,cta,cth,dta,dth,tt,temp);
+module aiGo(reset,clk,humanIn,enable,AIOut,finish,x,y);
+/*
+	AI部分的底层模块
+*/
 input wire clk,enable;
 input wire reset;
-input wire [224:0] humanIn; 
-output wire [224:0] AIOut;
-output wire finish;
-output reg[3:0]x,y;
-//output wire[31:0] SCAI,SCHM;
-//output wire[8:0] tt;
-//output wire [2:0] ata,ath,bta,bth,cta,cth,dta,dth;
-//output wire [8:0]outState;
-//output wire [8:0]temp;
-//output wire [9:0] LOCAI,LOCHM;
-//output wire [31:0] MAXAI,MAXHM;
-//output wire isEmpty;
-//output wire valid;
+input wire [224:0] humanIn; //人类棋子的摆放
+output wire [224:0] AIOut; //AI棋子的摆放
+output wire finish; //AI是否已经结束了自己的计算
+output reg[3:0]x,y; //AI最近一次选择的位置
 
-reg isFinished;
-reg [224:0]AI;
-reg [9:0] target;
-reg empty;
-reg [9:0] humanPos;
-reg [9:0] aiPos;
-reg state;
-reg [31:0] maxAi,maxHm,maxHmForAi,maxAiForHm;
-reg [31:0] sumAi,sumHm;
-reg [8:0] aAi,aHm,bAi,bHm,cAi,cHm,dAi,dHm,aAit,aHmt,bAit,bHmt,cAit,cHmt,dAit,dHmt;
-wire [2:0] aTypeAi,aTypeHm,bTypeAi,bTypeHm,cTypeAi,cTypeHm,dTypeAi,dTypeHm;
-wire [31:0] aValueAi,aValueHm,bValueAi,bValueHm,cValueAi,cValueHm,dValueAi,dValueHm;
-reg firstIn;
-reg firstValid;
-reg jgClk;
+
+reg isFinished; //标志着是否结束的寄存器
+reg [224:0]AI; //保存AI的布局的寄存器组
+reg [9:0] target; //当前枚举到的棋盘位置
+reg empty; //枚举点是否为空
+reg [9:0] humanPos; //人类的最大受益点
+reg [9:0] aiPos; //AI的最大收益点
+reg state; //当前AI模块的状态
+reg [31:0] maxAi,maxHm,maxHmForAi,maxAiForHm; //分别记录AI的最大收益,人类的最大收益,AI最大收益处人类的收益,人类收益最大处AI的收益
+reg [31:0] sumAi,sumHm; //用来临时的保存每个枚举点四个方向的估值和
 
 /*
-assign temp=aAit;
-assign ata=aTypeAi;
-assign ath=aTypeHm;
-assign bta=bTypeAi;
-assign bth=bTypeHm;
-assign cta=cTypeAi;
-assign cth=cTypeHm;
-assign dta=dTypeAi;
-assign dth=dTypeHm;
-assign tt=target;*/
-/*
-assign outState=target;
-assign LOCAI=aiPos;
-assign LOCHM=humanPos;
-assign SCAI=sumAi;
-assign SCHM=sumHm;
-assign valid=firstValid;
-assign isEmpty=empty;
-assign MAXAI=maxAi;
-assign MAXHM=maxHm;
+	AI模块每一轮都会对每一个空位估值，分别为人类在这里下以及AI在这里下估值。
+	对人类的收益估值主要是为了判断是否需要防守，相当于一个交换立场思考的过程。
+	由于我们采用的贪心算法，每个方向的估值只有落子点及左右四个点的状态是有意义的。
 */
+reg [8:0] aAi,aHm,bAi,bHm,cAi,cHm,dAi,dHm,aAit,aHmt,bAit,bHmt,cAit,cHmt,dAit,dHmt; 
+//四个方向上，人类和AI分别作为障碍时的状态
+wire [2:0] aTypeAi,aTypeHm,bTypeAi,bTypeHm,cTypeAi,cTypeHm,dTypeAi,dTypeHm;
+//四个方向上，人类和AI的棋形
+wire [31:0] aValueAi,aValueHm,bValueAi,bValueHm,cValueAi,cValueHm,dValueAi,dValueHm;
+//四个方向上，人类和AI的估值
+reg firstIn; 
+reg firstValid;
 
 assign AIOut[224:0]=AI[224:0];
 assign finish=isFinished;
-//module judgeChessForm(input wire	[8:0]A,input wire [8:0]B,output wire [2:0]typeOut);
-judgeChessForm aAiJudge(jgClk,aAi,aHmt,aTypeAi);
-judgeChessForm aHmJudge(jgClk,aHm,aAit,aTypeHm);
+
+
+//开启八个棋形判断器，分别判断AI和人类四个方向的棋形
+judgeChessForm aAiJudge(aAi,aHmt,aTypeAi);
+judgeChessForm aHmJudge(aHm,aAit,aTypeHm);
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-judgeChessForm bAiJudge(jgClk,bAi,bHmt,bTypeAi);
-judgeChessForm bHmJudge(jgClk,bHm,bAit,bTypeHm);
+judgeChessForm bAiJudge(bAi,bHmt,bTypeAi);
+judgeChessForm bHmJudge(bHm,bAit,bTypeHm);
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-judgeChessForm cAiJudge(jgClk,cAi,cHmt,cTypeAi);
-judgeChessForm cHmJudge(jgClk,cHm,cAit,cTypeHm);
+judgeChessForm cAiJudge(cAi,cHmt,cTypeAi);
+judgeChessForm cHmJudge(cHm,cAit,cTypeHm);
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-judgeChessForm dAiJudge(jgClk,dAi,dHmt,dTypeAi);
-judgeChessForm dHmJudge(jgClk,dHm,dAit,dTypeHm);
+judgeChessForm dAiJudge(dAi,dHmt,dTypeAi);
+judgeChessForm dHmJudge(dHm,dAit,dTypeHm);
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//开启八个估值器，接受AI/人类四个方向的棋形，给出估值
 evaluate aAiEva(aTypeAi,aValueAi);
 evaluate aHmEva(aTypeHm,aValueHm);
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,25 +90,41 @@ evaluate dHmEva(dTypeHm,dValueHm);
 integer row,col;
 integer i,j,k;
 
+//AI模块由时序同步触发或者rest信号异步触发
+/*
+	AI模块会枚举棋盘上15*15=255个位置。
+	我们把整个枚举过程分解到若干个时钟周期钟去做。
+	可以理解为一个状态机。
+	整个状态机总共有510个状态。
+	我们用target和state共同表示。
+	其中target用来枚举255个位置。
+	state=0的时候，修改输入到棋形判断器的棋子信息。
+	state=1的时候，从估值器中取出估值，做最优化筛选。
+*/
 always @(posedge clk or negedge reset)
 begin
 
 	if(!reset)
-		begin//0
+		begin
 			firstIn<=1;
 			AI<=0;
 			AI[112]<=1;
 			isFinished<=0;
-		end//0
+		end
+	//如果是reset信号被激活，初始化棋盘状态
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	else if(enable)
+
 		begin//1
 			if(firstIn==1)
-				begin//2
+				begin
 					x<=7;
 					y<=7;
 					isFinished<=1;
 					firstIn<=0;
-				end//2
+				end
+			//如果是第一次落子，不用估值，直接在中心落子
+			//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			else
 				begin//3
 					if(isFinished)
@@ -134,15 +133,16 @@ begin
 							isFinished<=0;
 							state<=0;
 							firstValid<=1;
-							jgClk<=0;
 						end
+					 //AI模块在这个时钟脉冲才被拉起,初始化枚举量
+					//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 					else
-						begin//4
-							if(state==0)
-								begin//ZZ
-									if(target==225)
+						begin
+							if(state==0)//state==0,修改输入估值器的棋子信息
+								begin
+									if(target==225)//枚举结束,进入终止状态
 										begin
-											if(maxAi>maxHm)
+											if(maxAi>maxHm)//判断进攻还是防守，选择落子点
 												begin
 													AI[aiPos]<=1;
 													x<=aiPos/15;
@@ -156,17 +156,21 @@ begin
 												end
 											 isFinished<=1;
 											 target<=0;
+											 //结束AI's turn,重置枚举量,发出结束信号
 										end
 									else 
-										begin//yy
+										begin
 											empty<=0;
-											if(humanIn[target]==0&&AI[target]==0)
-												begin//xx
-													empty<=1;
+											if(humanIn[target]==0&&AI[target]==0)//如果枚举点是空的
+												begin
+													empty<=1;//更新空位标记
 													row=target/15;
 													col=target%15;
-														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-														for(i=-4;i<=4;i=i+1)
+													/*
+														下面开始更新四个方向的棋子信息
+													*/
+														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  从左到右方向的棋子信息
+														for(i=-4;i<=4;i=i+1) 
 														if(col+i<0||col+i>14)
 															begin
 																aHmt[i+4]<=1;
@@ -191,7 +195,7 @@ begin
 																		aAit[i+4]<=AI[target+i];
 																	end
 															end
-														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+															//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 从上到下的棋子信息
 														for(i=-4;i<=4;i=i+1)
 														if(row+i<0||row+i>14)
 															begin
@@ -217,7 +221,7 @@ begin
 																		bAit[i+4]<=AI[target+i*15];
 																	end
 															end
-														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //从左上到右下
 														for(i=-4;i<=4;i=i+1)
 														if(row+i<0||row+i>14||col+i<0||col+i>14)
 															begin
@@ -243,7 +247,7 @@ begin
 																		cAit[i+4]<=AI[target+i*15+i];
 																	end
 															end
-														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //从左下到右上
 														for(i=-4;i<=4;i=i+1)
 														if(row+i<0||row+i>14||col-i<0||col-i>14)
 															begin
@@ -270,19 +274,20 @@ begin
 																	end
 															end
 														//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-														jgClk<=1;
+								
 												end//xx
-												state<=~state;
-												target<=target+1;
+												state<=~state; //state反相
+												target<=target+1; //枚举量位移
 										end//yy	
 									end//ZZ
-								else 
+								else    //state==1
 									begin//AA
-										if(empty==1)
+										if(empty==1) //如果枚举点为空,获取估值信息,更新最优点
 												begin
 													sumAi=aValueAi+bValueAi+cValueAi+dValueAi;
 													sumHm=aValueHm+bValueHm+cValueHm+dValueHm;
-													if(firstValid)
+													//分别将四个方向的估值相加,这里必须要用阻塞赋值
+													if(firstValid) //如果是第一次找到有效的枚举点,最优值就是当前枚举点
 														begin
 															maxAi<=sumAi;
 															maxAiForHm<=sumAi;
@@ -292,7 +297,7 @@ begin
 															humanPos<=target-1;
 															firstValid<=0;
 														end
-													else 
+													else  //否则和之前的最优值比较,更新
 														begin
 															if(sumAi>maxAi||(sumAi==maxAi&&sumHm>maxHmForAi))
 																begin
@@ -308,7 +313,7 @@ begin
 																end
 														end
 												end
-												jgClk<=0;
+										
 												state<=~state;
 									end//AA
 						end//4
